@@ -1,0 +1,6368 @@
+{
+  "luis_schema_version": "6.0.0",
+  "intents": [
+    {
+      "name": "answer_question",
+      "features": [
+        {
+          "featureName": "AnswerList"
+        }
+      ]
+    },
+    {
+      "name": "exclude",
+      "features": [
+        {
+          "featureName": "ExcludeList"
+        }
+      ]
+    },
+    {
+      "name": "None",
+      "features": []
+    },
+    {
+      "name": "pause",
+      "features": [
+        {
+          "featureName": "StopList"
+        }
+      ]
+    },
+    {
+      "name": "play_music",
+      "features": [
+        {
+          "featureName": "song_info_help"
+        },
+        {
+          "featureName": "FromBy"
+        }
+      ]
+    },
+    {
+      "name": "shuffle",
+      "features": [
+        {
+          "featureName": "ShuffleList"
+        }
+      ]
+    },
+    {
+      "name": "Volume",
+      "features": [
+        {
+          "featureName": "VolumeList"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "name": "song_parent",
+      "children": [
+        {
+          "name": "pre_song",
+          "children": [],
+          "features": [
+            {
+              "featureName": "song_info_help"
+            }
+          ]
+        },
+        {
+          "name": "post_song",
+          "children": [],
+          "features": [
+            {
+              "featureName": "song_info_help"
+            }
+          ]
+        },
+        {
+          "name": "song_info",
+          "children": [],
+          "features": []
+        },
+        {
+          "name": "in_between",
+          "children": [],
+          "features": [
+            {
+              "featureName": "FromBy"
+            }
+          ]
+        },
+        {
+          "name": "genre_info",
+          "children": [],
+          "features": [
+            {
+              "modelName": "song_genre"
+            }
+          ]
+        }
+      ],
+      "roles": [],
+      "features": [
+        {
+          "featureName": "song_info_help"
+        },
+        {
+          "featureName": "FromBy"
+        }
+      ]
+    }
+  ],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "song_genre",
+      "subLists": [
+        {
+          "canonicalForm": "genre_list",
+          "list": [
+            "schlager",
+            "deathrash metal",
+            "boi",
+            "secular hymn",
+            "techstep",
+            "music of san",
+            "rapcore",
+            "indigenous nigerian music",
+            "songs of brittany",
+            "en espanol",
+            "sevdalinka",
+            "sailor songs",
+            "drill music",
+            "bothy band",
+            "piano blues",
+            "deathrock",
+            "canaria",
+            "hip house",
+            "bush ballad",
+            "deathgrind",
+            "stride",
+            "neoclassical new-age music",
+            "neon pop",
+            "chaoui",
+            "kuduro",
+            "vals",
+            "indigenous australian",
+            "taarab",
+            "cumbia",
+            "oppari",
+            "chromatic fantasia",
+            "porro",
+            "lounge music",
+            "traditional country",
+            "rockabilly",
+            "meringue",
+            "black",
+            "pop-jazz",
+            "lullaby",
+            "electro",
+            "merengue music",
+            "biomusic",
+            "thrash metal",
+            "phase",
+            "national socialist black metal",
+            "tonk",
+            "baroque music",
+            "dragoste",
+            "industrial techno",
+            "jazzcore",
+            "latin soul",
+            "improvisation",
+            "electronics",
+            "big room house",
+            "mashup",
+            "heartland rock",
+            "khaliji",
+            "sound system",
+            "acid techno",
+            "school hip hop",
+            "sailor's song",
+            "underground",
+            "kenyan",
+            "art rock",
+            "catalan rumba",
+            "zoblazo",
+            "dream metal",
+            "crossover prog",
+            "hungarian rock",
+            "folk & roll",
+            "adult hits",
+            "folk music of england",
+            "christian metal",
+            "huapango",
+            "sangita",
+            "rock and roll",
+            "neo-classical metal",
+            "motown",
+            "caliente",
+            "wind",
+            "m-base",
+            "music in dagestan",
+            "quebec hip-hop",
+            "turkish folk music",
+            "indigenous nigerian",
+            "trock",
+            "funeral march",
+            "folk rhythm",
+            "noir",
+            "funky",
+            "concerted madrigal",
+            "basque",
+            "vaudeville-operette",
+            "milonga-candombe",
+            "music of the cayman islands",
+            "show tune",
+            "volkstümliche musik",
+            "parody",
+            "heavy hardcore",
+            "minimal",
+            "rock music in cuba",
+            "contemporary worship",
+            "punk rock",
+            "ballet d'action",
+            "saravane",
+            "synth-pop",
+            "hornpipe",
+            "cabaret",
+            "fast polka",
+            "scottish gaelic punk",
+            "electro hop",
+            "chico",
+            "pimba",
+            "kindie rock",
+            "music in the udmurt republic",
+            "doo-wop",
+            "pagan folk",
+            "death industrial",
+            "abwe",
+            "tone",
+            "youth crew",
+            "music of mozambique",
+            "indie folk",
+            "martial",
+            "kawaii metal",
+            "yass",
+            "neo-medieval music",
+            "sound",
+            "progressive pop",
+            "basque music",
+            "children's",
+            "horror punk",
+            "armenian folk music",
+            "grindie",
+            "crunkcore",
+            "illbient",
+            "chrieng brunh",
+            "speed garage",
+            "of brittany",
+            "country rock",
+            "hymn concertato",
+            "music of guangxi",
+            "comedy rock",
+            "ambient trance",
+            "chutney music",
+            "video game music",
+            "pìobaireachd",
+            "ambient dub",
+            "early baroque music",
+            "brass",
+            "bass music",
+            "music in krasnodar",
+            "modal jazz",
+            "chicago blues",
+            "music of navarre and la rioja",
+            "abidat rma",
+            "funk rock",
+            "nu metal",
+            "guyue",
+            "regia",
+            "dirt",
+            "musical comedy",
+            "pakistani semi-classical",
+            "pieces for harpsichord",
+            "slam death metal",
+            "tswana music",
+            "coladeira",
+            "broder singer",
+            "tierra caliente",
+            "kizomba",
+            "fugue",
+            "kurdish music",
+            "jota aragonese",
+            "folk pop",
+            "club",
+            "chimurenga",
+            "hymn",
+            "post-grunge",
+            "hiranaam",
+            "italian hip hop",
+            "line dance",
+            "grrrl",
+            "orchestral song",
+            "imene metua",
+            "christian punk",
+            "boogie-woogie",
+            "bocet",
+            "futurepop",
+            "gaelic",
+            "tsyganskiy romance",
+            "york blues",
+            "celtic music",
+            "sleaze metal",
+            "'n' roll",
+            "christian country music",
+            "digital hardcore",
+            "jazzstep",
+            "boeremusiek",
+            "2 tone",
+            "music of the andaman and nicobar",
+            "hop soul",
+            "christian country",
+            "vesnianky",
+            "bitpop",
+            "viking metal",
+            "indian folk music",
+            "snap music",
+            "drone metal",
+            "christian music",
+            "programme music",
+            "soft rock",
+            "classic rock",
+            "post-black metal",
+            "smooth soul",
+            "brega",
+            "music of curaçao",
+            "jazz samba",
+            "cajun music",
+            "son calentano",
+            "sawt",
+            "gamelan gambang",
+            "future house",
+            "cumbia villera",
+            "kpanlogo",
+            "singing",
+            "yürük semai",
+            "taiwanese rock",
+            "minimal electro",
+            "c-pop",
+            "theatre music",
+            "new yorkshire",
+            "band",
+            "surf",
+            "burlesque",
+            "nigun",
+            "bop",
+            "mumble rap",
+            "christian hip hop",
+            "industrial dance",
+            "manele",
+            "new wave of new wave",
+            "goa trance",
+            "kenyan music",
+            "japanese hardcore",
+            "cubano",
+            "xi'an guyue",
+            "space age pop",
+            "queercore",
+            "music of limousin",
+            "acid trance",
+            "street punk",
+            "early dancehall",
+            "changa",
+            "singer",
+            "surf music",
+            "guaguancó",
+            "downer metal",
+            "anthem house",
+            "afro-peruvian",
+            "habanera",
+            "eurodance",
+            "colossal baroque",
+            "lyric singing",
+            "trap",
+            "kayōkyoku",
+            "tv track",
+            "mizrahi",
+            "nerd music",
+            "hard house",
+            "pop music",
+            "mathcore",
+            "in musica",
+            "anarcho-punk",
+            "post-punk revival",
+            "post-britpop",
+            "new prog",
+            "progressive rock",
+            "folk music of",
+            "instrumental music",
+            "free jazz",
+            "mozambique",
+            "big drum",
+            "semi-classical",
+            "symphonic",
+            "sertaneja",
+            "blue yodeling",
+            "bosnian rock",
+            "nu-funk",
+            "romani",
+            "punk blues",
+            "son montuno",
+            "ballad",
+            "wave of ska",
+            "dolewave",
+            "rebetiko",
+            "ranchera",
+            "noise",
+            "parody music",
+            "trot",
+            "french baroque",
+            "festejo",
+            "gnawa music",
+            "brostep",
+            "sama'i",
+            "downtempo",
+            "turbo-folk",
+            "dutch house",
+            "guarania",
+            "german rock",
+            "hip-hop",
+            "nigerien hip hop",
+            "west coast hip hop",
+            "bard-rock",
+            "neue musik",
+            "acidcore",
+            "hardcore punk",
+            "jazz waltz",
+            "hipster hop",
+            "semai",
+            "nu jazz",
+            "basque radical rock",
+            "patriotic song",
+            "ottoman classical",
+            "gan",
+            "dream pop",
+            "runo song",
+            "revival",
+            "abecedarian hymn",
+            "zeuhl",
+            "music in",
+            "light music",
+            "music of peru",
+            "instrumental jazz",
+            "neoclassicism",
+            "hop tuga",
+            "secular music",
+            "punta",
+            "old-time",
+            "and bass",
+            "gagok",
+            "township",
+            "cabaret rock",
+            "alegre",
+            "nuubaat",
+            "eclecticism in",
+            "grunge",
+            "thrashcore",
+            "gospel reggae",
+            "ovi (music)",
+            "andaluz",
+            "melodic metalcore",
+            "brown-eyed soul",
+            "concerto",
+            "speed metal",
+            "noise rock",
+            "chicano rap",
+            "jesus",
+            "worldbeat",
+            "villera",
+            "brutal death metal",
+            "music in nenets autonomous",
+            "old-time music",
+            "zamba",
+            "concitato",
+            "breton rock",
+            "ringbang",
+            "death metal",
+            "music of british",
+            "trad jazz",
+            "spiritual",
+            "punk jazz",
+            "contemporary classical",
+            "orleans soul",
+            "tonada",
+            "rapso",
+            "afro-jazz",
+            "american folk music",
+            "skool breaks",
+            "wagnerian rock",
+            "baithak gana",
+            "ragga",
+            "incidental music",
+            "bmg movement",
+            "baggy",
+            "sevillanas",
+            "conscious hip hop",
+            "trip rock",
+            "berceuse",
+            "lam luang",
+            "samba reggae",
+            "champeta",
+            "duo",
+            "europop",
+            "ambient techno",
+            "neo kyma",
+            "bend-skin",
+            "zydeco",
+            "arabic",
+            "age pop",
+            "rocksteady",
+            "afro-cuban jazz",
+            "ethereal wave",
+            "death-doom",
+            "outlaw country",
+            "banda sinfónica",
+            "phleng thai sakon",
+            "gana",
+            "bereznianka",
+            "swamp blues",
+            "tecno-rumba",
+            "summer song",
+            "acoustic",
+            "ceòl beag",
+            "white power music",
+            "country folk",
+            "blackgaze",
+            "gadhon",
+            "arena rock",
+            "hip hop soul",
+            "raw black metal",
+            "american hip hop",
+            "electronic body music",
+            "free rock",
+            "dhaanto",
+            "yodeling",
+            "ragga pop",
+            "proibidão",
+            "depressive black metal",
+            "crossover thrash",
+            "afrobeat",
+            "de dragoste",
+            "techno",
+            "melodic death metal",
+            "rap metal",
+            "timba",
+            "circus music",
+            "beat",
+            "shock rock",
+            "postmodern",
+            "gaana",
+            "anti-folk",
+            "electroclash",
+            "morenada",
+            "sambalanço",
+            "politrock",
+            "experimental hip hop",
+            "aguinaldo",
+            "kar",
+            "jiuta",
+            "ultra metal",
+            "for harpsichord",
+            "chicago soul",
+            "famo",
+            "complexe",
+            "mass",
+            "imene tuki",
+            "cuarteto",
+            "tejano",
+            "garage rock",
+            "patriotic",
+            "electronic dance",
+            "hyphy",
+            "orchestral pop",
+            "hard trance",
+            "popular music",
+            "laïko",
+            "electrostep",
+            "k-pop",
+            "crew",
+            "drum and bass",
+            "broken beat",
+            "post-progressive",
+            "baião",
+            "frevo",
+            "funk soul",
+            "balearic trance",
+            "happy hardcore",
+            "go-go",
+            "napoletana",
+            "wienerlied",
+            "political punk",
+            "huaylarsh",
+            "avant-garde",
+            "progressive house",
+            "wizard rock",
+            "kilam",
+            "armenian folk",
+            "nhạc tài tử",
+            "symphonic metal",
+            "combined rhythm",
+            "rock in opposition",
+            "rera",
+            "canon",
+            "phase music",
+            "tribal house",
+            "elevator",
+            "vallenato",
+            "seconda pratica",
+            "psychedelic music",
+            "tejano music",
+            "space ambient",
+            "concert polka",
+            "independent music",
+            "yé-yé",
+            "carnatic",
+            "medieval metal",
+            "electronic music",
+            "machine-pop",
+            "jazz",
+            "folk",
+            "neoclassical dark wave",
+            "ohangla dance",
+            "adult contemporary music",
+            "acid house",
+            "mákina",
+            "normals",
+            "música popular brasileira",
+            "cantopop",
+            "gengeton",
+            "contemporary folk",
+            "pinoy rock",
+            "art punk",
+            "nomine",
+            "enka",
+            "australian hip hop",
+            "rock music in ireland",
+            "nk-pop",
+            "electroacoustic",
+            "afro-peruvian music",
+            "symphonic power metal",
+            "french pop",
+            "música sertaneja",
+            "israeli rock",
+            "skweee",
+            "soukous",
+            "ping",
+            "tech trance",
+            "pagan metal",
+            "stronda",
+            "classical music",
+            "eurobeat",
+            "rap rock",
+            "hardstep",
+            "latin trap",
+            "romantic music",
+            "konzert",
+            "tune",
+            "sanjo",
+            "music of jharkhand",
+            "music of west",
+            "aria",
+            "ghetto house",
+            "gothic rock",
+            "gothenburg metal",
+            "chimurenga music",
+            "bogino duu",
+            "hipco music",
+            "gaga",
+            "pop punk",
+            "techno body",
+            "raga rock",
+            "new wave of american heavy metal",
+            "de fusion",
+            "peruvian waltz",
+            "pirekua",
+            "muziki wa dansi",
+            "quimbe",
+            "himene tarava",
+            "neo-medieval",
+            "early music",
+            "igbo rap",
+            "coast hip hop",
+            "organ repertoire",
+            "campursari",
+            "metalcore",
+            "pagan folk music",
+            "bluegrass music",
+            "irish traditional",
+            "revolution summer",
+            "and irish",
+            "country blues",
+            "new pop",
+            "louisiana blues",
+            "music of hebei",
+            "and roll",
+            "salon music",
+            "extreme metal",
+            "acoustic rock",
+            "contemporary jewish religious",
+            "kantu",
+            "neo-bop jazz",
+            "méringue",
+            "finnish rock",
+            "funaná",
+            "were music",
+            "haitian hip hop",
+            "cyber metal",
+            "oltului",
+            "zouglou",
+            "music in tatarstan",
+            "nu metalcore",
+            "vaporwave",
+            "lewoz",
+            "secular",
+            "bluegrass",
+            "music in astrakhan",
+            "rara",
+            "bavarian polka",
+            "psychobilly",
+            "dub",
+            "romanian rock",
+            "bay area thrash metal",
+            "russian romance",
+            "pastorella",
+            "tuki",
+            "latin hip hop",
+            "pop-folk",
+            "bubblegum pop",
+            "ska punk",
+            "cha-cha-chá",
+            "mirror fugue",
+            "lu",
+            "bikutsi",
+            "word",
+            "shibuya-kei",
+            "stoner rock",
+            "euro disco",
+            "neurofunk",
+            "muzika",
+            "flamenco rumba",
+            "q-pop",
+            "wave of british heavy metal",
+            "american folk",
+            "bandana thrash",
+            "batá-rumba",
+            "kaseko",
+            "filin",
+            "'n' bass",
+            "salsa dura",
+            "beat music",
+            "folktronica",
+            "cante chico",
+            "rap",
+            "tallava",
+            "crossover",
+            "stile concitato",
+            "bounce music",
+            "ha diskan",
+            "psytrance",
+            "pratica",
+            "post-rock",
+            "verso",
+            "onkyokei",
+            "avant-prog",
+            "darkstep",
+            "indian rock",
+            "sega music",
+            "shanto",
+            "tower",
+            "guabina",
+            "and heavy",
+            "country rap",
+            "bhatiali",
+            "arabic rock",
+            "anderen bands",
+            "türkü",
+            "pryvit",
+            "progg",
+            "national song",
+            "nightcore",
+            "odissi music",
+            "harsh noise wall",
+            "arabic pop",
+            "afro-soul",
+            "dark rock",
+            "seggae",
+            "p-funk",
+            "taqwacore",
+            "norwegian pop music",
+            "gypsy jazz",
+            "hip hop in the dominican republic",
+            "exotica",
+            "punta rock",
+            "lovers rock",
+            "dimotiko",
+            "coast blues",
+            "skiladiko",
+            "wong shadow",
+            "mugham",
+            "nerd punk",
+            "rhythm and grime",
+            "ziglibithy",
+            "saloma",
+            "andalusian copla",
+            "popular brasileira",
+            "freak metal",
+            "drone",
+            "byzantine music",
+            "goregrind",
+            "nazi punk",
+            "fantasia",
+            "music in krasnodar krai",
+            "pueblo music",
+            "dutch-language music",
+            "sogak",
+            "new orleans soul",
+            "polo",
+            "reggae",
+            "mbalax",
+            "makwaya",
+            "spanish rock",
+            "epic",
+            "no-fi",
+            "dansband",
+            "american march",
+            "ambient pop",
+            "gong kebyar",
+            "florida death metal",
+            "sentimental ballad",
+            "rave",
+            "rigsar",
+            "political music",
+            "early",
+            "muiñeira",
+            "kertok",
+            "classical",
+            "compas",
+            "british blues",
+            "glitch hop",
+            "technopop",
+            "munggang",
+            "indigenous music",
+            "proto-prog",
+            "yuka",
+            "melodic black metal",
+            "of argentina",
+            "& roll",
+            "freak folk",
+            "chinese hip hop",
+            "slowcore",
+            "modern country",
+            "malhun",
+            "taqtuqa",
+            "neotraditional country",
+            "indian classical music",
+            "dunedin sound",
+            "sadra",
+            "city club",
+            "electroacoustic improvisation",
+            "gospel blues",
+            "outsider house",
+            "ambient jungle",
+            "modinha",
+            "ragga jungle",
+            "lord rock",
+            "regional mexican",
+            "new york hardcore",
+            "montuno",
+            "drumstep",
+            "underground music",
+            "texas blues",
+            "sunshine pop",
+            "suling",
+            "seis",
+            "shashmaqam",
+            "pop",
+            "comédie en vaudevilles",
+            "ethio-jazz",
+            "music in the komi republic",
+            "malaysian pop",
+            "boogie",
+            "naamyam",
+            "horror music",
+            "chut-kai-pang",
+            "meadhonach",
+            "folk music",
+            "orchestral",
+            "zarzuela",
+            "zimdancehall",
+            "post-industrial music",
+            "drill",
+            "minimal glitch",
+            "music of krasnoyarsk",
+            "tyrolienne",
+            "chill-out music",
+            "cartageneras",
+            "turkish pop",
+            "french organ school",
+            "pop soul",
+            "norteño",
+            "intelligent dance",
+            "italo house",
+            "soulful house",
+            "symphonic mugam",
+            "traditional metal",
+            "hyangak",
+            "akiba-pop",
+            "southern gospel",
+            "cello rock",
+            "production",
+            "ballad tradition",
+            "freakbeat",
+            "hop in the dominican republic",
+            "rhythm and blues",
+            "vocal house",
+            "hits",
+            "shidaiqu",
+            "hutsulka",
+            "beste",
+            "and blues",
+            "music in ingushetia",
+            "african-american",
+            "tecnocumbia",
+            "zamba alegre",
+            "new-age music",
+            "guitar music",
+            "jump blues",
+            "gharnati music",
+            "dubstyle",
+            "cuban rumba",
+            "coon song",
+            "avant-garde pop",
+            "miami bass",
+            "hop",
+            "galician rumba",
+            "progressive folk",
+            "shadow",
+            "cifra",
+            "in opposition",
+            "turkish pop music",
+            "folk rock",
+            "fusion",
+            "slavic folk music",
+            "charanga-vallenata",
+            "hardstyle",
+            "noise hop",
+            "harp",
+            "radical rock",
+            "nerd-folk",
+            "political song",
+            "nasheed",
+            "choral",
+            "pirate metal",
+            "northwest wind",
+            "tamborera",
+            "trova",
+            "fasıl",
+            "benga",
+            "ragga hip hop",
+            "native american hip hop",
+            "neue volksmusik",
+            "cowpunk",
+            "new wave",
+            "jota",
+            "soul blues",
+            "sufi rock",
+            "angura kei",
+            "maroon music",
+            "kundiman",
+            "rock opera",
+            "chamber music",
+            "christian alternative rock",
+            "film score",
+            "pornogrind",
+            "music of alberta",
+            "jack swing",
+            "2-step garage",
+            "groove metal",
+            "revival punk",
+            "hasidic music",
+            "tribe",
+            "rock",
+            "violento",
+            "chầu văn",
+            "nerdcore",
+            "club house",
+            "oratorio",
+            "choral music",
+            "nortec",
+            "dark ambient",
+            "kwakwaka'wakw",
+            "boxes summer 2016 tour",
+            "step metal",
+            "industrial coldwave",
+            "takht",
+            "teen pop",
+            "detroit techno",
+            "gombhira",
+            "trikiti",
+            "plena",
+            "novelty song",
+            "psychedelic soul",
+            "gothic music",
+            "self-cover",
+            "deep house",
+            "new acoustic music",
+            "avant-garde music",
+            "nangma",
+            "and grime",
+            "gamelan siteran",
+            "rock de fusión",
+            "trap music",
+            "funk carioca",
+            "oriental metal",
+            "latin metal",
+            "korean hip hop",
+            "gånglåt",
+            "opera",
+            "acoustic blues",
+            "oshare-kei",
+            "aboriginal rock",
+            "tappa",
+            "modern rock",
+            "peruvian cumbia",
+            "music of lebanon",
+            "afro/cosmic",
+            "uk drill",
+            "cassation",
+            "new beat",
+            "instrumental rock",
+            "patriotic music",
+            "zamrock",
+            "reggae rock",
+            "tecno brega",
+            "samba-canção",
+            "reggae fusion",
+            "hindustani classical music",
+            "arabic music",
+            "persian traditional",
+            "uk funky",
+            "jewish music",
+            "galante music",
+            "neoclassical new-age",
+            "tientos",
+            "schranz",
+            "gothic metal",
+            "seminole",
+            "isolationism",
+            "son cubano",
+            "stoner metal",
+            "programme",
+            "inuit",
+            "music of israel",
+            "congolese rumba",
+            "dub poetry",
+            "children's music",
+            "payada",
+            "en vaudevilles",
+            "nuevo tango",
+            "york hardcore",
+            "psychedelic folk",
+            "drone music",
+            "vallenato-salsa",
+            "free improvisation",
+            "filmi qawwali",
+            "bubblegum dance",
+            "western music",
+            "chillstep",
+            "anthem",
+            "slavic folk",
+            "swing music",
+            "looping",
+            "gaúcho rock",
+            "house music",
+            "tatar rock",
+            "battle rap",
+            "uruguayan punk",
+            "postmodern music",
+            "geistliches lied",
+            "trønder rock",
+            "tchamassi",
+            "bhangra",
+            "taiwanese folk music",
+            "new wave of british heavy metal",
+            "liturgical music",
+            "black metal",
+            "romantic flow",
+            "nouvelle chanson",
+            "balwo",
+            "twee pop",
+            "calypso",
+            "paisley underground",
+            "hofii",
+            "mugam",
+            "geek rock",
+            "maloya",
+            "industrial hip hop",
+            "britpop",
+            "doom",
+            "bravura",
+            "movement",
+            "experimental music",
+            "popular",
+            "theatre",
+            "jazz fusion",
+            "galante",
+            "glam rock",
+            "ritual ambient",
+            "aleatoric",
+            "folkhop",
+            "arabic pop music",
+            "country pop",
+            "uk garage",
+            "éntekhno",
+            "neues geistliches lied",
+            "ovsenki",
+            "noisegrind",
+            "latin jazz",
+            "motswako",
+            "gambang",
+            "hardcore hip hop",
+            "ajisari",
+            "cavacha",
+            "funky house",
+            "dutch-language",
+            "d'action",
+            "funk",
+            "reductionism",
+            "martial industrial",
+            "afro pop music",
+            "tropotianka",
+            "baroque music of the british isles",
+            "electric blues",
+            "wave of new wave",
+            "mambo",
+            "kanto",
+            "country",
+            "epic metal",
+            "experimental dub",
+            "grime",
+            "glam",
+            "chiptune",
+            "afro/cosmic music",
+            "rock music",
+            "country and irish",
+            "post-punk",
+            "chamarrita",
+            "occult rock",
+            "lounge rock",
+            "nisiotika",
+            "baroque music of the british",
+            "jazz-funk",
+            "vishnupada",
+            "fandango",
+            "the normals",
+            "medieval folk rock",
+            "emo",
+            "french rock",
+            "nueva ola",
+            "milonga",
+            "deep funk",
+            "chanson pour boire",
+            "brukdown",
+            "music of guizhou",
+            "marchinha",
+            "bass",
+            "čalgija",
+            "early baroque",
+            "city pop",
+            "terrorcore",
+            "nu skool breaks",
+            "algorave",
+            "image song",
+            "garage",
+            "quiet storm",
+            "psychedelic hip hop",
+            "listening",
+            "carol",
+            "gaelic punk",
+            "afro pop",
+            "music of scotland",
+            "industrial",
+            "8-bit music",
+            "moombahcore",
+            "sounds",
+            "hardbass",
+            "gaelic music",
+            "chamamé",
+            "truck-driving country",
+            "tropipop",
+            "alternative punk",
+            "folk songs",
+            "music of jiangxi",
+            "hi-nrg",
+            "rock against communism",
+            "kölschrock",
+            "songo-salsa",
+            "austropop",
+            "choro",
+            "jari gan",
+            "ver",
+            "intuitive folk",
+            "liturgical",
+            "wonky",
+            "uplifting trance",
+            "uk hard house",
+            "waltz",
+            "group sounds",
+            "ragtime",
+            "no wave",
+            "yorkshire",
+            "anatolian rock",
+            "huayño",
+            "artcore",
+            "sludge metal",
+            "die anderen bands",
+            "indian folk",
+            "incidental",
+            "renaissance",
+            "baroque pop",
+            "progressive psytrance",
+            "art music",
+            "modern javanese",
+            "canción",
+            "french baroque music",
+            "traditional jazz",
+            "trip hop",
+            "industrial music",
+            "beach",
+            "andean",
+            "duranguense",
+            "poetry",
+            "music of jamaica",
+            "music in the komi",
+            "contemporary r&b",
+            "psychedelic",
+            "breakstep",
+            "noel",
+            "jump-up",
+            "aṣíkò",
+            "traditional heavy metal",
+            "marabi",
+            "parlour",
+            "third wave of ska",
+            "big-beat",
+            "banda",
+            "pasillo",
+            "shaabi",
+            "waka music",
+            "new york death metal",
+            "iroquois",
+            "gospel music",
+            "tonadilla",
+            "siteran",
+            "dōjin music",
+            "ethnic electronica",
+            "dance-rock",
+            "jumpstyle",
+            "punkabilly",
+            "cadence-lypso",
+            "synthpunk",
+            "melodie",
+            "plunderphonics",
+            "nueva trova",
+            "ambient black metal",
+            "southern soul",
+            "toeshey",
+            "musik",
+            "argentine cumbia",
+            "snap",
+            "emo rap",
+            "mainstream rock",
+            "disco polo",
+            "porn groove",
+            "british hip hop",
+            "mexican",
+            "pueblo",
+            "alternative hip hop",
+            "kapanirong",
+            "music of algeria",
+            "american march music",
+            "concert march",
+            "samba",
+            "emo rock",
+            "new school hip hop",
+            "pathetique",
+            "hardbag",
+            "opm",
+            "electropunk",
+            "andean new age music",
+            "dark cabaret",
+            "j-pop",
+            "atmospheric black metal",
+            "bouyon soca",
+            "goombay",
+            "american minstrel",
+            "trance metal",
+            "djent",
+            "in nomine",
+            "gharnati",
+            "neo trance",
+            "latin alternative",
+            "industrial hardcore",
+            "mbaqanga",
+            "funeral doom metal",
+            "hatecore",
+            "folklore of argentina",
+            "villanella",
+            "dance",
+            "jungle",
+            "jongo",
+            "electronicore",
+            "nueva canción chilena",
+            "deutsche welle",
+            "easy listening",
+            "tamunangue",
+            "southern hip hop",
+            "ottoman classical music",
+            "filmi",
+            "narodna muzika",
+            "lapar",
+            "indie rock",
+            "maroon",
+            "albazo",
+            "gosos",
+            "power duo",
+            "opera metal",
+            "alpine folk",
+            "hard and heavy",
+            "blues rock",
+            "norwegian pop",
+            "beach music",
+            "pop music in ukraine",
+            "chilean rock",
+            "music of the andaman and nicobar islands",
+            "dance-punk",
+            "kei",
+            "cowboy pop",
+            "indoribbean pop",
+            "cumbia rap",
+            "pop rock",
+            "bossa nova",
+            "desi hip hop",
+            "denpa song",
+            "chaabi",
+            "sarva",
+            "electro house",
+            "zemirot",
+            "east coast hip hop",
+            "totalism",
+            "thrash",
+            "ca din tulnic",
+            "blackened death metal",
+            "contemporary christian music",
+            "pop metal",
+            "protest song",
+            "taiwanese folk",
+            "stage and screen",
+            "early ragga",
+            "kuyis",
+            "swamp rock",
+            "nóta",
+            "and screen",
+            "malagueñas",
+            "bolel",
+            "bakersfield sound",
+            "disco",
+            "music in rostov",
+            "saeta",
+            "comic song",
+            "concertato",
+            "ska-core",
+            "experimental rock",
+            "east coast blues",
+            "latin ballad",
+            "skiffle",
+            "jewish rock",
+            "jersey club",
+            "political",
+            "pub rock",
+            "acid rock",
+            "organ school",
+            "chaiti",
+            "avanzada regia",
+            "cruel romance",
+            "various genre",
+            "music of sri lanka",
+            "early reggae",
+            "waka",
+            "pop-rap",
+            "french pop music",
+            "pesnya",
+            "jwé",
+            "caña",
+            "rhythm",
+            "thung",
+            "moroccan pop",
+            "hard bop",
+            "avant-pop",
+            "chill-out",
+            "stronda music",
+            "bandish",
+            "chicago hardcore",
+            "guitar",
+            "soca music",
+            "industrial rock",
+            "dhumpa sangita",
+            "indigenous",
+            "dumka",
+            "garage house",
+            "alpine folk music",
+            "wonky pop",
+            "music of san marino",
+            "smooth jazz",
+            "disco house",
+            "greek folk",
+            "pasodoble",
+            "nòva cançon",
+            "york death metal",
+            "unaizah samri",
+            "african gospel",
+            "njuup",
+            "christian hardcore",
+            "music of west africa",
+            "haitian rock",
+            "lounge",
+            "cappella",
+            "jazz blues",
+            "009 sound system",
+            "noise pop",
+            "symphonic music",
+            "hard rock",
+            "powerviolence",
+            "urban contemporary",
+            "kan ha diskan",
+            "rekuhkara",
+            "mizrahi music",
+            "glam metal",
+            "footwork",
+            "modern blues",
+            "german punk",
+            "raggacore",
+            "spring song",
+            "sleaze rock",
+            "lyrical art",
+            "breaks",
+            "troll metal",
+            "boogaloo",
+            "wave",
+            "progressive metal",
+            "makossa",
+            "alkayida",
+            "minimal music",
+            "kwakwaka'wakw music",
+            "salsa",
+            "tower music",
+            "rave music",
+            "romance",
+            "repertoire",
+            "psychedelic trance",
+            "memphis soul",
+            "meditation",
+            "mento",
+            "brick city club",
+            "nayda",
+            "rabiz",
+            "novelty piano",
+            "balearic beat",
+            "avant-garde jazz",
+            "kacapi suling",
+            "jeel",
+            "sufi",
+            "mawwal",
+            "dubstep",
+            "microhouse",
+            "dirty house",
+            "archontorebetiko",
+            "bard",
+            "renaissance music",
+            "contemporary classical music",
+            "sprechgesang",
+            "electronic forró",
+            "carnavalskraker",
+            "big beat",
+            "doom metal",
+            "breakbeat",
+            "dihanaam",
+            "ahellil",
+            "vocal",
+            "mundartrock",
+            "neo acoustic",
+            "pachanga",
+            "8-bit",
+            "algerian chaabi",
+            "indie pop",
+            "bass house",
+            "guajira",
+            "nerd",
+            "propaganda",
+            "future garage",
+            "hopak-kolom",
+            "electronic body",
+            "cloud rap",
+            "tropical house",
+            "celtic punk",
+            "schedrovka",
+            "retro-prog",
+            "long song",
+            "h8000",
+            "mirror canon",
+            "space disco",
+            "revolutionary song",
+            "21st-century classical",
+            "bertsolaritza",
+            "reggada",
+            "holubka",
+            "daechwita",
+            "trallpunk",
+            "batuque",
+            "punk'n'roll",
+            "favola in musica",
+            "riyaz",
+            "chutney",
+            "independent",
+            "sacred harp",
+            "cha-cha-cha",
+            "latin rock",
+            "din tulnic",
+            "flamenco",
+            "ballade",
+            "andalusian classical",
+            "southern rock",
+            "music of hubei",
+            "gangsta rap",
+            "drill 'n' bass",
+            "christmas carol",
+            "a palo seco",
+            "harawi",
+            "soul jazz",
+            "music of british columbia",
+            "prog",
+            "coimbra fado",
+            "kadans",
+            "indian classical",
+            "bounce",
+            "punk metal",
+            "red and anarchist black metal",
+            "dark electro",
+            "calypso music",
+            "duu",
+            "morna",
+            "frat rock",
+            "rock andaluz",
+            "march",
+            "hip hop",
+            "crossover jazz",
+            "thai sakon",
+            "romantic",
+            "piano rock",
+            "groove",
+            "german hip hop",
+            "glee",
+            "rma",
+            "tondero",
+            "pagode",
+            "dangdut",
+            "freeform hardcore",
+            "dark metal",
+            "slutwave",
+            "tonás",
+            "iroquois music",
+            "latin house",
+            "dark wave",
+            "ethno jazz",
+            "music of kalmykia",
+            "cool jazz",
+            "minimal house",
+            "toasting",
+            "minimal techno",
+            "eefing",
+            "tembang sunda",
+            "gothic",
+            "urban pasifika",
+            "hard dance",
+            "electrotango",
+            "bantowbol",
+            "indorock",
+            "style",
+            "italo dance",
+            "canción melódica",
+            "music of ireland",
+            "inuit music",
+            "post-bop",
+            "lento violento",
+            "electronica",
+            "punk",
+            "world",
+            "early hardstyle",
+            "melbourne bounce",
+            "nederpop",
+            "vispop",
+            "reggaestep",
+            "greek folk music",
+            "emo pop",
+            "latin american music",
+            "bebop",
+            "volksmusik",
+            "baltimore club",
+            "gazel",
+            "kong hip hop",
+            "folk jazz",
+            "post-hardcore",
+            "acoustic music",
+            "chamber",
+            "mandopop",
+            "polca canaria",
+            "zouk",
+            "bolero",
+            "new-age",
+            "grungecore",
+            "gamelan gong kebyar",
+            "screamo rap",
+            "funk ostentação",
+            "merong",
+            "soundcloud rap",
+            "new mexico music",
+            "blatnaya pesnya",
+            "western",
+            "post-disco",
+            "sadcore",
+            "mini-jazz",
+            "contemporary folk music",
+            "hasidic",
+            "slovenian rock",
+            "carnival song",
+            "freestyle",
+            "jōruri",
+            "hindustani classical",
+            "music of krasnoyarsk krai",
+            "odissi",
+            "time lord rock",
+            "mainstream jazz",
+            "spacesynth",
+            "boedra",
+            "antico",
+            "roots reggae",
+            "progressive death metal",
+            "bhavageete",
+            "delta blues",
+            "trap metal",
+            "french polka",
+            "krautrock",
+            "celtic",
+            "pakistani semi-classical music",
+            "kliningan",
+            "death 'n' roll",
+            "min'yō",
+            "horror",
+            "chicago house",
+            "latin",
+            "new york blues",
+            "prison rock",
+            "traditional bluegrass",
+            "wa dansi",
+            "viking rock",
+            "music of the cayman",
+            "electronic",
+            "soca",
+            "marimbalax",
+            "kbach",
+            "tambu",
+            "humoresque",
+            "electronic dance music",
+            "cavalier song",
+            "philadelphia soul",
+            "religious music",
+            "fado",
+            "romani music",
+            "homo hop",
+            "swedish ballad tradition",
+            "township music",
+            "speedcore",
+            "balkan brass",
+            "instrumental",
+            "psychedelic rock",
+            "pour boire",
+            "melodic hardcore",
+            "reggaeton",
+            "calentano",
+            "sardana",
+            "bozlak",
+            "metal",
+            "russendisko",
+            "music of innsbruck",
+            "propaganda song",
+            "comedy music",
+            "new jack swing",
+            "campaign song",
+            "nova",
+            "cuplé",
+            "slovak folk music",
+            "latin music",
+            "gamelan gadhon",
+            "orleans rhythm and blues",
+            "cybergrind",
+            "qawwali",
+            "q'axilu",
+            "pagan black metal",
+            "hardtechno",
+            "samri",
+            "rock en español",
+            "blues",
+            "balkan jazz",
+            "symphony",
+            "semba",
+            "morning song",
+            "bluegrass gospel",
+            "post-metal",
+            "circus",
+            "flow",
+            "gospel",
+            "oi!",
+            "cajun",
+            "darkcore",
+            "adult contemporary",
+            "pacific reggae",
+            "modern javanese music",
+            "iê-iê-iê",
+            "northern soul",
+            "mirabrás",
+            "white power",
+            "breakbeat hardcore",
+            "ambient",
+            "mariachi",
+            "4-beat",
+            "dub techno",
+            "british rock",
+            "music of mexico",
+            "political hip hop",
+            "guaracha",
+            "alternative r&b",
+            "elevator music",
+            "lied",
+            "lo-fi",
+            "cueca",
+            "deuda song",
+            "country soul",
+            "children's song",
+            "alternative rock",
+            "new orleans rhythm and blues",
+            "freestyle rap",
+            "cante jondo",
+            "gypsy punk",
+            "thai pop music",
+            "unblack metal",
+            "kulning",
+            "benga music",
+            "tarava",
+            "jewish",
+            "vocal music",
+            "synth",
+            "grebo",
+            "american primitive guitar",
+            "experimental pop",
+            "sung poetry",
+            "kurdish",
+            "smooth reggae",
+            "funktronica",
+            "gregorian chant",
+            "summer 2016 tour",
+            "indigenous australian music",
+            "jesus music",
+            "diva house",
+            "jazz rock",
+            "deathcore",
+            "peyote song",
+            "katuli",
+            "comedy hip hop",
+            "klezmer",
+            "ola",
+            "meloblack metal",
+            "21st-century classical music",
+            "nordic folk music",
+            "turkish folk",
+            "black music",
+            "chutney soca",
+            "uk hardcore",
+            "folk metal",
+            "nu-punk",
+            "world fusion music",
+            "midwest hip hop",
+            "industrial metal",
+            "estrada",
+            "trance",
+            "luang",
+            "experimental",
+            "samba-rock",
+            "epic music",
+            "breakcore",
+            "lam saravane",
+            "nenia",
+            "contemporary",
+            "mando",
+            "kajari",
+            "riot grrrl",
+            "musique concrète",
+            "tropical music",
+            "lo-fi music",
+            "pols",
+            "electro-industrial",
+            "finnish grime",
+            "electroacoustic music",
+            "hori",
+            "merengue",
+            "xhosa",
+            "minimal wave",
+            "indietronica",
+            "madchester",
+            "techdombe",
+            "chamber pop",
+            "visual kei",
+            "hipco",
+            "xhosa music",
+            "celtic fusion",
+            "salendro",
+            "insertion aria",
+            "tsugaru-jamisen",
+            "dancehall",
+            "party song",
+            "american minstrel music",
+            "argentine tango",
+            "area thrash metal",
+            "sensitive style",
+            "gamelan selunding",
+            "math rock",
+            "soul",
+            "azonto",
+            "sophisti-pop",
+            "yeongsan hoesang",
+            "phleng phuea chiwit",
+            "kenyan hip hop",
+            "madhyalaya",
+            "chumak",
+            "ska",
+            "socialist black metal",
+            "corrido",
+            "bachata",
+            "african reggae",
+            "filmi pop",
+            "classic rag",
+            "house",
+            "samai",
+            "rhyming spiritual",
+            "electropop",
+            "harsh noise",
+            "rasin",
+            "keening",
+            "garage punk",
+            "post-industrial",
+            "new mexico",
+            "gumbe",
+            "brunh",
+            "ethnic pop",
+            "biker metal",
+            "krung",
+            "cantes a palo seco",
+            "roots rock",
+            "moombahton",
+            "jing ping",
+            "witch house",
+            "breakup song",
+            "kawina",
+            "mafioso rap",
+            "french house",
+            "orchestra",
+            "hardcore ragga",
+            "french hip hop",
+            "chilena",
+            "chicha",
+            "livetronica",
+            "merenhouse",
+            "aggrotech",
+            "war metal",
+            "true metal",
+            "persian traditional music",
+            "sainaimu",
+            "vocal jazz",
+            "meditation music",
+            "crunk",
+            "progressive bluegrass",
+            "old-school hip hop",
+            "west coast blues",
+            "music of henan",
+            "reggae en español",
+            "mazurca ranchera",
+            "progressive trance",
+            "tafelmusik",
+            "western swing",
+            "carnatic music",
+            "stoner doom",
+            "neue deutsche welle",
+            "andalusi nubah",
+            "pasifika",
+            "mod revival",
+            "music of transylvania",
+            "moroccan chaabi",
+            "afro trap",
+            "boogie rock",
+            "kyma",
+            "polonaise",
+            "eclecticism in music",
+            "al jeel",
+            "turntablism",
+            "forró",
+            "beguine",
+            "alentejano",
+            "swing",
+            "bomba",
+            "spoken word",
+            "traditional pop music",
+            "andalusian classical music",
+            "rag",
+            "israeli hip hop",
+            "music in nenets autonomous okrug",
+            "hip hop tuga",
+            "primitive guitar",
+            "kwaito",
+            "contemporary jewish religious music",
+            "ikinimba",
+            "protopunk",
+            "christmas music",
+            "wassoulou",
+            "jamaquello",
+            "liquid funk",
+            "dance music",
+            "space",
+            "andean new age",
+            "freestyle music",
+            "music in the udmurt",
+            "polish rock",
+            "shoegazing",
+            "russian rock",
+            "gamelan bebonangan",
+            "punk pathetique",
+            "polka",
+            "rumba",
+            "neue deutsche härte",
+            "grindcore",
+            "popular classical",
+            "neo-psychedelia",
+            "bassline",
+            "r&b",
+            "sawani",
+            "venezuelan merengue",
+            "papare",
+            "epic doom metal",
+            "rom kbach",
+            "dansband pop",
+            "bolero son",
+            "siguiriyas",
+            "humppa",
+            "music of brittany",
+            "phuea chiwit",
+            "hoesang",
+            "sea shanty",
+            "sambass",
+            "funkstep",
+            "technobanda",
+            "african-american music",
+            "soul music",
+            "epic heavy metal",
+            "saz semai",
+            "aleatoric music",
+            "pocky",
+            "andean music",
+            "and anarchist black metal",
+            "electro swing",
+            "contemporary worship music",
+            "traditional pop",
+            "t'ong guitar",
+            "chillwave",
+            "symphonic black metal",
+            "art pop",
+            "tropical",
+            "tswana",
+            "dirty rap",
+            "música criolla",
+            "summer",
+            "kolyadka",
+            "chalga",
+            "stadium anthem",
+            "ambient house",
+            "lowercase",
+            "music of sri",
+            "space music",
+            "v-pop",
+            "alternative dance",
+            "neo soul",
+            "storm",
+            "taiwanese hip hop",
+            "sunda",
+            "cymrucana",
+            "alternative country",
+            "blue-eyed soul",
+            "nanas",
+            "glitch",
+            "chamrieng samai",
+            "alternative metal",
+            "slovak folk",
+            "nordic folk",
+            "doomcore",
+            "mélodie",
+            "kz-pop",
+            "manila sound",
+            "wave of american heavy metal",
+            "xiyue",
+            "leftfield",
+            "folk punk",
+            "palingsound",
+            "political party song",
+            "honky tonk",
+            "newsierock",
+            "rap music",
+            "progressive folk music",
+            "blackcore",
+            "against communism",
+            "hardcore",
+            "holler blues",
+            "axé music",
+            "foxcore",
+            "fidget house",
+            "vocal trance",
+            "funk metal",
+            "ultra",
+            "aragonese",
+            "jangle pop",
+            "space rock",
+            "shanty",
+            "electronic rock",
+            "albanian hip hop",
+            "parlour music",
+            "j-rock",
+            "wind music",
+            "melodic funk",
+            "nintendocore",
+            "frenchcore",
+            "power noise",
+            "byzantine",
+            "carioca",
+            "martial music",
+            "symphonic rock",
+            "nu-disco",
+            "lament",
+            "mainstream hardcore",
+            "alternative music",
+            "neo-progressive rock",
+            "levenslied",
+            "russian chanson",
+            "gnawa",
+            "canzone napoletana",
+            "drum",
+            "old school death metal",
+            "pastorale",
+            "metua",
+            "rhumba",
+            "country music",
+            "christian",
+            "g-funk",
+            "tamborito",
+            "coupé-décalé",
+            "gothic punk",
+            "indian pop",
+            "comedy",
+            "chorale concerto",
+            "psychedelic pop",
+            "bouncy techno",
+            "criolla",
+            "gamelan salendro",
+            "rock music in",
+            "glam punk",
+            "skate punk",
+            "french progressive rock",
+            "d-beat",
+            "hip hop music",
+            "mbube",
+            "highlife",
+            "luk thung",
+            "world music",
+            "new rave",
+            "raï",
+            "irish traditional music",
+            "algerian hip hop",
+            "mixture rock",
+            "ghettotech",
+            "tango",
+            "hiplife",
+            "contemporary christian",
+            "danza",
+            "lundu",
+            "naattupurapaattu",
+            "stile antico",
+            "avant-garde metal",
+            "propaganda music",
+            "jondo",
+            "xintianyou",
+            "ceol meadhonach",
+            "underground hip hop",
+            "r'n'besk",
+            "operatic pop",
+            "chanson",
+            "soldier's song",
+            "screamo",
+            "dream trance",
+            "dura",
+            "school death metal",
+            "progressive country",
+            "power pop",
+            "thai pop",
+            "japanese jazz",
+            "italo disco",
+            "blues metal",
+            "live looping",
+            "seminole music",
+            "swing revival",
+            "early hardcore",
+            "latin american",
+            "salon",
+            "hong kong hip hop",
+            "black doom",
+            "texas country music",
+            "latin pop",
+            "drum'n'core",
+            "music of jilin",
+            "americana",
+            "music of navarre and la",
+            "sonata",
+            "baisha xiyue",
+            "celtic rock",
+            "bebonangan",
+            "sari gan",
+            "zindalii",
+            "fell",
+            "chaoui music",
+            "sufi music",
+            "modern classical",
+            "power electronics",
+            "pichakaree",
+            "anison",
+            "power metal",
+            "southern metal",
+            "proto-metal",
+            "chicano rock",
+            "a cappella",
+            "cante alentejano",
+            "pilón",
+            "baroque",
+            "minimalist trance",
+            "geistliches konzert",
+            "bulgarian folk songs",
+            "french blues",
+            "chumba",
+            "nueva canción",
+            "rock català",
+            "sega",
+            "christian rock",
+            "music in astrakhan oblast",
+            "love metal",
+            "japanese hip hop",
+            "college rock",
+            "new flamenco",
+            "carranga (music genre)",
+            "technical death metal",
+            "dance-pop",
+            "chap hop",
+            "luk krung",
+            "taiwanese mandopop",
+            "selunding",
+            "neo-rockabilly",
+            "music in rostov oblast",
+            "future bass",
+            "cha-wave",
+            "wassoulou music",
+            "vaudeville-opérette",
+            "dixieland",
+            "joropo",
+            "mezwed",
+            "noise wall",
+            "music in khakassia",
+            "heavy metal",
+            "beag",
+            "synthwave",
+            "coldwave",
+            "alternative",
+            "tech house",
+            "minneapolis sound",
+            "sthayi",
+            "nubah",
+            "forme complexe",
+            "red dirt",
+            "world fusion",
+            "jazz rap",
+            "horrorcore",
+            "rock noir",
+            "celtic metal",
+            "ambient music",
+            "folk baroque",
+            "middle of the road",
+            "neofolk",
+            "hands up",
+            "copla",
+            "intelligent dance music",
+            "acid jazz",
+            "black contemporary",
+            "gothabilly",
+            "electro dance",
+            "madrigal",
+            "new acoustic",
+            "twoubadou",
+            "production music",
+            "psybient",
+            "piano",
+            "post-classical",
+            "alternative reggaeton",
+            "music of melanesia",
+            "techno body music",
+            "tropicália",
+            "art",
+            "dungeon synth",
+            "wangga",
+            "music of macedonia",
+            "crust punk",
+            "orchestral jazz",
+            "room house",
+            "rub-a-dub",
+            "texas country",
+            "r and b",
+            "80's",
+            "80s",
+            "70s",
+            "70's",
+            "60's",
+            "60s",
+            "90s",
+            "90's",
+            "50's",
+            "50s"
+          ]
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": [
+        "role1"
+      ]
+    },
+    {
+      "name": "number",
+      "roles": [
+        "first",
+        "second"
+      ]
+    }
+  ],
+  "utterances": [
+    {
+      "text": "are there any rock songs that have won best musical score two years in a row",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "can you pause please?",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "can you pause this song for a moment?",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "can you pause?",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "can you play adeles latest album",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 31
+        },
+        {
+          "entity": "song_info",
+          "startPos": 13,
+          "endPos": 18
+        },
+        {
+          "entity": "post_song",
+          "startPos": 20,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "can you play music by prince",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 22,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "can you play some contemporary music",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 35
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 18,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "can you play some rihanna please?",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "in_between",
+          "startPos": 18,
+          "endPos": 24
+        },
+        {
+          "entity": "post_song",
+          "startPos": 26,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "can you play something from the disco genre?",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 30
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 43
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 32,
+          "endPos": 36
+        },
+        {
+          "entity": "post_song",
+          "startPos": 38,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "can you play the country song crazy beautiful",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 28
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 44
+        },
+        {
+          "entity": "song_info",
+          "startPos": 30,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "can you play the lastest album of rihanna?",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 41
+        },
+        {
+          "entity": "song_info",
+          "startPos": 34,
+          "endPos": 40
+        },
+        {
+          "entity": "post_song",
+          "startPos": 41,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "can you play track 1 of adeles new album",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 39
+        },
+        {
+          "entity": "song_info",
+          "startPos": 13,
+          "endPos": 19
+        },
+        {
+          "entity": "in_between",
+          "startPos": 21,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 29
+        },
+        {
+          "entity": "post_song",
+          "startPos": 31,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "can you play track 2 of prince's album 1999.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 43
+        },
+        {
+          "entity": "song_info",
+          "startPos": 13,
+          "endPos": 19
+        },
+        {
+          "entity": "in_between",
+          "startPos": 21,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "can you play track 5 of billie eilish first album",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 11
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 48
+        },
+        {
+          "entity": "song_info",
+          "startPos": 13,
+          "endPos": 19
+        },
+        {
+          "entity": "in_between",
+          "startPos": 21,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 36
+        },
+        {
+          "entity": "post_song",
+          "startPos": 38,
+          "endPos": 48
+        }
+      ]
+    },
+    {
+      "text": "can you please change the volume by 8 points",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "can you please pause",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "can you please play the track unfaithful",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 28
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 39
+        },
+        {
+          "entity": "song_info",
+          "startPos": 30,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "can you please shuffle this playlist?",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "can you put shuffle mode on please?",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "can you put the music on pause.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "can you stop playing this song?",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "can you stop the music for a moment",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "can you turn down the music volume",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "can you turn the music down a little bit?",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "can you turn the volume up by 10 points",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "can you turn the volume up by two settings?",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "can you turn the volume up please?",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "cancel that one, not good.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "change the order of the music.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "change this song because i don't like its music",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "come to my window is my favorite song by melissa etheridge please play it",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "song_info",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 72
+        },
+        {
+          "entity": "in_between",
+          "startPos": 18,
+          "endPos": 39
+        },
+        {
+          "entity": "song_info",
+          "startPos": 41,
+          "endPos": 57
+        },
+        {
+          "entity": "post_song",
+          "startPos": 59,
+          "endPos": 72
+        }
+      ]
+    },
+    {
+      "text": "could you please play the newest single by drake?",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 41
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 48
+        },
+        {
+          "entity": "song_info",
+          "startPos": 43,
+          "endPos": 47
+        },
+        {
+          "entity": "post_song",
+          "startPos": 48,
+          "endPos": 48
+        }
+      ]
+    },
+    {
+      "text": "could you raise the volume a little bit",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "do not play any taylor swift music, i hate her sound.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "do not play this kind of music",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "do you wnat to shuflle the music?",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "don't play country music please",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "give me a good shuffle of my favorite artists.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "have the killers won any music awards",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "hold my music at its current spot.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "hold that song for a moment.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "hold up, pause the song.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "how long has j lo been making music",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "how many albums did prince release?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "how many albums has katy perry created?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "how many gold albums did elvis generate?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "how old is hip hop",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "how old is the genre heavy metal",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "how old was janet jackson when she recorded her first album?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "how speed is 70's rock?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "i am not a big fan of this current track, i do not like it at all.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i am not enjoying that song, please stop playing it",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i dislike this song please stop playing it",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i do not care for this music.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i do not like any songs on this album",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i dont like it.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i don't like that, please take it off the play list.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i don't like this music",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i don't like this one, skip it.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i don't like this track.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i don't like this, change it please",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i hate heavy metal.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i have to go answer the door, please pause the song",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "i really do not like this song.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "i wanna hear some jain",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 18,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i want the music on shuffle mode.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "i want to adjust the volume",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "i want to hear madonna",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "i want to hear opiate by tool.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 29
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 20
+        },
+        {
+          "entity": "in_between",
+          "startPos": 22,
+          "endPos": 23
+        },
+        {
+          "entity": "song_info",
+          "startPos": 25,
+          "endPos": 28
+        },
+        {
+          "entity": "post_song",
+          "startPos": 29,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "i want to hear taylor swift's song blank space.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 46
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 28
+        },
+        {
+          "entity": "in_between",
+          "startPos": 30,
+          "endPos": 33
+        },
+        {
+          "entity": "song_info",
+          "startPos": 35,
+          "endPos": 45
+        },
+        {
+          "entity": "post_song",
+          "startPos": 46,
+          "endPos": 46
+        }
+      ]
+    },
+    {
+      "text": "i want to hear the song songbird.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 31
+        },
+        {
+          "entity": "post_song",
+          "startPos": 32,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to bohemian rhapsody",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 36
+        },
+        {
+          "entity": "song_info",
+          "startPos": 20,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to elo, lets play some",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 38
+        },
+        {
+          "entity": "song_info",
+          "startPos": 20,
+          "endPos": 22
+        },
+        {
+          "entity": "post_song",
+          "startPos": 23,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to industrial music",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 35
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 20,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "i want to listen to skinny puppy",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 31
+        },
+        {
+          "entity": "song_info",
+          "startPos": 20,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "i want to mix that music.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "i want to play a jazz song from the 50's.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 40
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 17,
+          "endPos": 25
+        },
+        {
+          "entity": "in_between",
+          "startPos": 27,
+          "endPos": 34
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 36,
+          "endPos": 40
+        }
+      ]
+    },
+    {
+      "text": "i want to play a song by the band nirvana.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 41
+        },
+        {
+          "entity": "song_info",
+          "startPos": 34,
+          "endPos": 40
+        },
+        {
+          "entity": "post_song",
+          "startPos": 41,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "i want to play always for you",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 28
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "i want to play korn",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "i want to play the song stairway to heaven now",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 45
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 41
+        },
+        {
+          "entity": "post_song",
+          "startPos": 43,
+          "endPos": 45
+        }
+      ]
+    },
+    {
+      "text": "i want you to crank up the volume.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "i want you to play mr blue sky by elo next",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 17
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 41
+        },
+        {
+          "entity": "song_info",
+          "startPos": 19,
+          "endPos": 29
+        },
+        {
+          "entity": "in_between",
+          "startPos": 31,
+          "endPos": 32
+        },
+        {
+          "entity": "post_song",
+          "startPos": 34,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "i wish to pause the song now.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "i wish to play hello i love you by the doors.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 44
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 30
+        },
+        {
+          "entity": "in_between",
+          "startPos": 32,
+          "endPos": 33
+        },
+        {
+          "entity": "song_info",
+          "startPos": 35,
+          "endPos": 43
+        },
+        {
+          "entity": "post_song",
+          "startPos": 44,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "i wish to shuffle some songs.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "i would like to hear the third track from the first led zeppelin album",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 23
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 69
+        },
+        {
+          "entity": "song_info",
+          "startPos": 25,
+          "endPos": 35
+        },
+        {
+          "entity": "in_between",
+          "startPos": 37,
+          "endPos": 50
+        },
+        {
+          "entity": "song_info",
+          "startPos": 52,
+          "endPos": 63
+        },
+        {
+          "entity": "post_song",
+          "startPos": 65,
+          "endPos": 69
+        }
+      ]
+    },
+    {
+      "text": "i would like to hear unhappy birthday from the smiths",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 52
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 36
+        },
+        {
+          "entity": "in_between",
+          "startPos": 38,
+          "endPos": 41
+        },
+        {
+          "entity": "song_info",
+          "startPos": 43,
+          "endPos": 52
+        }
+      ]
+    },
+    {
+      "text": "i would like to listen to nine inch nails, please",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 24
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 48
+        },
+        {
+          "entity": "song_info",
+          "startPos": 26,
+          "endPos": 40
+        },
+        {
+          "entity": "post_song",
+          "startPos": 41,
+          "endPos": 48
+        }
+      ]
+    },
+    {
+      "text": "i would like you to play ban all the music for me, please",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 23
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 56
+        },
+        {
+          "entity": "song_info",
+          "startPos": 25,
+          "endPos": 41
+        },
+        {
+          "entity": "post_song",
+          "startPos": 43,
+          "endPos": 56
+        }
+      ]
+    },
+    {
+      "text": "i'm not liking this song.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "in what year was the first album by david bowie released",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "increase the sound volume",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "increase the volume of the music",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "is a new metal record out",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "is fresh prince hip hop?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "is linkin park still together?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "is van halen still active",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "just level up the music now.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "just turn the volume down a bit",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "lets have a listen to bohemian rhapsody by queen",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 47
+        },
+        {
+          "entity": "song_info",
+          "startPos": 22,
+          "endPos": 38
+        },
+        {
+          "entity": "in_between",
+          "startPos": 40,
+          "endPos": 41
+        },
+        {
+          "entity": "song_info",
+          "startPos": 43,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "lets have a random shuffle and play",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "lets have don't stop me now by queen",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 35
+        },
+        {
+          "entity": "song_info",
+          "startPos": 10,
+          "endPos": 26
+        },
+        {
+          "entity": "in_between",
+          "startPos": 28,
+          "endPos": 29
+        },
+        {
+          "entity": "song_info",
+          "startPos": 31,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "lets just pause it there for a minute",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "lower the volume of this song.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "mix the order of songs of my madonna playlist.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "mix up my playlist and shuffle all of the tracks.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "oh, i hate this song, stop it",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "ooh i don't like this",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "pause after this song",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "pause music while i make a phone call",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "pause this song",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "pause this track, please",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "pause, please",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "pause.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "play a country song by carrie underwood",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 38
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 7,
+          "endPos": 18
+        },
+        {
+          "entity": "in_between",
+          "startPos": 20,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 23,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "play a rock song by led zepplin.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 31
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 7,
+          "endPos": 15
+        },
+        {
+          "entity": "in_between",
+          "startPos": 17,
+          "endPos": 18
+        },
+        {
+          "entity": "song_info",
+          "startPos": 20,
+          "endPos": 30
+        },
+        {
+          "entity": "post_song",
+          "startPos": 31,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "play a soul song for me",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 7,
+          "endPos": 15
+        },
+        {
+          "entity": "post_song",
+          "startPos": 17,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "play anything by frank sinatra",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 29
+        },
+        {
+          "entity": "song_info",
+          "startPos": 17,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "play boney james jazz",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "play boyfriend song by ariana grande feat social house",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 53
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 13
+        },
+        {
+          "entity": "in_between",
+          "startPos": 15,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 23,
+          "endPos": 53
+        }
+      ]
+    },
+    {
+      "text": "play boys don't cry from the cure",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 18
+        },
+        {
+          "entity": "in_between",
+          "startPos": 20,
+          "endPos": 23
+        },
+        {
+          "entity": "song_info",
+          "startPos": 25,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "play closer again, please",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 24
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "post_song",
+          "startPos": 12,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "play closer by nine inch nails, please",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 37
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "in_between",
+          "startPos": 12,
+          "endPos": 13
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 29
+        },
+        {
+          "entity": "post_song",
+          "startPos": 30,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "play comics by caravan palace",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 28
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "in_between",
+          "startPos": 12,
+          "endPos": 13
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "play drake",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "play elton john",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 14
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "play get right by jlo",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 13
+        },
+        {
+          "entity": "in_between",
+          "startPos": 15,
+          "endPos": 16
+        },
+        {
+          "entity": "song_info",
+          "startPos": 18,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "play god only knows by the beach boys.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 37
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 18
+        },
+        {
+          "entity": "in_between",
+          "startPos": 20,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 23,
+          "endPos": 36
+        },
+        {
+          "entity": "post_song",
+          "startPos": 37,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "play heavy metal songs",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 15
+        },
+        {
+          "entity": "post_song",
+          "startPos": 17,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "play i want it that way by iron maiden",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 37
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 22
+        },
+        {
+          "entity": "in_between",
+          "startPos": 24,
+          "endPos": 25
+        },
+        {
+          "entity": "song_info",
+          "startPos": 27,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "play in the shadows by the rasmus.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 33
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 18
+        },
+        {
+          "entity": "in_between",
+          "startPos": 20,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 23,
+          "endPos": 32
+        },
+        {
+          "entity": "post_song",
+          "startPos": 33,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "play jesus take the wheel by carrie underwood",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 44
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 24
+        },
+        {
+          "entity": "in_between",
+          "startPos": 26,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 29,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "play journey works.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 17
+        },
+        {
+          "entity": "post_song",
+          "startPos": 18,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "play like a prayer from madonna.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 31
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 17
+        },
+        {
+          "entity": "in_between",
+          "startPos": 19,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 30
+        },
+        {
+          "entity": "post_song",
+          "startPos": 31,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "play me grace by jeff buckley.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 6
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 29
+        },
+        {
+          "entity": "song_info",
+          "startPos": 8,
+          "endPos": 12
+        },
+        {
+          "entity": "in_between",
+          "startPos": 14,
+          "endPos": 15
+        },
+        {
+          "entity": "song_info",
+          "startPos": 17,
+          "endPos": 28
+        },
+        {
+          "entity": "post_song",
+          "startPos": 29,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "play mettalica",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "play nas",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "play red hot chilli peppers",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 26
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "play rock and roll",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 17
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 5,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "play run to the hills",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "play shake it off by taylor swift",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 16
+        },
+        {
+          "entity": "in_between",
+          "startPos": 18,
+          "endPos": 19
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "play some r&b for me please.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 27
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 10,
+          "endPos": 12
+        },
+        {
+          "entity": "post_song",
+          "startPos": 14,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "play some songs from michael jackson, please",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 43
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 35
+        },
+        {
+          "entity": "post_song",
+          "startPos": 36,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "play some speed metal",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 10,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "play some vintage judas priest",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 29
+        },
+        {
+          "entity": "song_info",
+          "startPos": 10,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "play something by hozier",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 23
+        },
+        {
+          "entity": "song_info",
+          "startPos": 18,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "play something by madonna",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 24
+        },
+        {
+          "entity": "song_info",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "play songs in no particular order.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "play that eminem song",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_info",
+          "startPos": 10,
+          "endPos": 15
+        },
+        {
+          "entity": "post_song",
+          "startPos": 17,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "play the celine dion track my heart will go on.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 46
+        },
+        {
+          "entity": "song_info",
+          "startPos": 9,
+          "endPos": 19
+        },
+        {
+          "entity": "in_between",
+          "startPos": 21,
+          "endPos": 25
+        },
+        {
+          "entity": "song_info",
+          "startPos": 27,
+          "endPos": 45
+        },
+        {
+          "entity": "post_song",
+          "startPos": 46,
+          "endPos": 46
+        }
+      ]
+    },
+    {
+      "text": "play the latest pop hits.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 14
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 24
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 16,
+          "endPos": 18
+        },
+        {
+          "entity": "post_song",
+          "startPos": 20,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "play the most recent taylor swift releases",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 41
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 32
+        },
+        {
+          "entity": "post_song",
+          "startPos": 34,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "play the rolling stones",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "play the sentinel by judas priest",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 16
+        },
+        {
+          "entity": "in_between",
+          "startPos": 18,
+          "endPos": 19
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "play the songs in no particular order",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "play the track cake in the ocean",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 31
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "play the track somebody that i used to know",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 42
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "play the track sugar by maroon 5.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 19
+        },
+        {
+          "entity": "in_between",
+          "startPos": 21,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "play the track who let the dogs out",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 34
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "play track 1 of ani difranco's dilate.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 37
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 11
+        },
+        {
+          "entity": "in_between",
+          "startPos": 13,
+          "endPos": 14
+        },
+        {
+          "entity": "song_info",
+          "startPos": 16,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "play track 4 on the frank sinatra disk.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 38
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 11
+        },
+        {
+          "entity": "in_between",
+          "startPos": 13,
+          "endPos": 18
+        },
+        {
+          "entity": "song_info",
+          "startPos": 20,
+          "endPos": 32
+        },
+        {
+          "entity": "post_song",
+          "startPos": 34,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "play track 5 please.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 11
+        },
+        {
+          "entity": "post_song",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "play track 8 on this disk please.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 11
+        },
+        {
+          "entity": "post_song",
+          "startPos": 13,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "play track five now",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 14
+        },
+        {
+          "entity": "post_song",
+          "startPos": 16,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "play track three of janet jackson",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 15
+        },
+        {
+          "entity": "in_between",
+          "startPos": 17,
+          "endPos": 18
+        },
+        {
+          "entity": "song_info",
+          "startPos": 20,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "play track two of james brown second album",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 41
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 13
+        },
+        {
+          "entity": "in_between",
+          "startPos": 15,
+          "endPos": 16
+        },
+        {
+          "entity": "song_info",
+          "startPos": 18,
+          "endPos": 28
+        },
+        {
+          "entity": "post_song",
+          "startPos": 30,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "play yellow submarine by the beatles",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 35
+        },
+        {
+          "entity": "song_info",
+          "startPos": 5,
+          "endPos": 20
+        },
+        {
+          "entity": "in_between",
+          "startPos": 22,
+          "endPos": 23
+        },
+        {
+          "entity": "song_info",
+          "startPos": 25,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "please change the order.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "please lower the volume",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "please pause",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "please pause for me",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "please pause so i can make a call.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "please pause the song.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "please play a pop song.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 12
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 14,
+          "endPos": 21
+        },
+        {
+          "entity": "post_song",
+          "startPos": 22,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "please play any song by queen",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 28
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "please play death metal",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 12,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "please play get up 10",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_info",
+          "startPos": 12,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "please play hip hop",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 12,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "please play how great thou art by elvis.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 39
+        },
+        {
+          "entity": "song_info",
+          "startPos": 12,
+          "endPos": 29
+        },
+        {
+          "entity": "in_between",
+          "startPos": 31,
+          "endPos": 32
+        },
+        {
+          "entity": "song_info",
+          "startPos": 34,
+          "endPos": 38
+        },
+        {
+          "entity": "post_song",
+          "startPos": 39,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "please play million reasons by lady gaga",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 39
+        },
+        {
+          "entity": "song_info",
+          "startPos": 12,
+          "endPos": 26
+        },
+        {
+          "entity": "in_between",
+          "startPos": 28,
+          "endPos": 29
+        },
+        {
+          "entity": "song_info",
+          "startPos": 31,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "please play music by madonna",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "please play run to the hills by iron maiden",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 42
+        },
+        {
+          "entity": "song_info",
+          "startPos": 12,
+          "endPos": 27
+        },
+        {
+          "entity": "in_between",
+          "startPos": 29,
+          "endPos": 30
+        },
+        {
+          "entity": "song_info",
+          "startPos": 32,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "please play some ja rule",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 23
+        },
+        {
+          "entity": "song_info",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "please play some of cher's music",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 18
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 31
+        },
+        {
+          "entity": "song_info",
+          "startPos": 20,
+          "endPos": 25
+        },
+        {
+          "entity": "post_song",
+          "startPos": 27,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "please play some r and b",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 23
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "please play the song gravity by sara bareilles",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 45
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 27
+        },
+        {
+          "entity": "in_between",
+          "startPos": 29,
+          "endPos": 30
+        },
+        {
+          "entity": "song_info",
+          "startPos": 32,
+          "endPos": 45
+        }
+      ]
+    },
+    {
+      "text": "please play the song hurt by nine inch nails",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 43
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 24
+        },
+        {
+          "entity": "in_between",
+          "startPos": 26,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 29,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "please play the song wall of water by mayhem",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 43
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 33
+        },
+        {
+          "entity": "in_between",
+          "startPos": 35,
+          "endPos": 36
+        },
+        {
+          "entity": "song_info",
+          "startPos": 38,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "please play track 10 of the beatles album listed first.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 54
+        },
+        {
+          "entity": "song_info",
+          "startPos": 12,
+          "endPos": 19
+        },
+        {
+          "entity": "in_between",
+          "startPos": 21,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 34
+        },
+        {
+          "entity": "post_song",
+          "startPos": 36,
+          "endPos": 54
+        }
+      ]
+    },
+    {
+      "text": "please play track 2 of kiss.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 12,
+          "endPos": 18
+        },
+        {
+          "entity": "in_between",
+          "startPos": 20,
+          "endPos": 21
+        },
+        {
+          "entity": "song_info",
+          "startPos": 23,
+          "endPos": 26
+        },
+        {
+          "entity": "post_song",
+          "startPos": 27,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "please put some folk music on.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 14
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 29
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 16,
+          "endPos": 25
+        },
+        {
+          "entity": "post_song",
+          "startPos": 27,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "please set the music to a quieter level.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "please shuffle",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "please shuffle in my playlist",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "please shuffle the song",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "please shuffle to the next song",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "please start playing track 5 of the current album in my favorite list.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 19
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 69
+        },
+        {
+          "entity": "song_info",
+          "startPos": 21,
+          "endPos": 27
+        },
+        {
+          "entity": "post_song",
+          "startPos": 29,
+          "endPos": 69
+        }
+      ]
+    },
+    {
+      "text": "please turn down the music.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "please turn up the volume one level",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "please would you play amsterdam by nothing but thieves at an acceptable volume.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 78
+        },
+        {
+          "entity": "song_info",
+          "startPos": 22,
+          "endPos": 30
+        },
+        {
+          "entity": "in_between",
+          "startPos": 32,
+          "endPos": 33
+        },
+        {
+          "entity": "song_info",
+          "startPos": 35,
+          "endPos": 53
+        },
+        {
+          "entity": "post_song",
+          "startPos": 55,
+          "endPos": 78
+        }
+      ]
+    },
+    {
+      "text": "please, play some rap music for me",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 33
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 18,
+          "endPos": 26
+        },
+        {
+          "entity": "post_song",
+          "startPos": 28,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "pump up that volume for this song.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "put on hello by adele",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 5
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 20
+        },
+        {
+          "entity": "song_info",
+          "startPos": 7,
+          "endPos": 11
+        },
+        {
+          "entity": "in_between",
+          "startPos": 13,
+          "endPos": 14
+        },
+        {
+          "entity": "song_info",
+          "startPos": 16,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "put on some jazz for me",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 10
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 22
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 12,
+          "endPos": 15
+        },
+        {
+          "entity": "post_song",
+          "startPos": 17,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "put on the track rockstar by post malone",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 15
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 39
+        },
+        {
+          "entity": "song_info",
+          "startPos": 17,
+          "endPos": 24
+        },
+        {
+          "entity": "in_between",
+          "startPos": 26,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 29,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "put these songs on random",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "shuffle on nina's i phone",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "shuffle the album by beyonce.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "shuffle the disks please.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "shuffle the playlist 3",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "shuffle the playlist please",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "skip to the next music track please",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "start playing skinny love by bon iver",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 12
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 36
+        },
+        {
+          "entity": "song_info",
+          "startPos": 14,
+          "endPos": 24
+        },
+        {
+          "entity": "in_between",
+          "startPos": 26,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 29,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "start playing track 1 of the ac/dc album",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 12
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 39
+        },
+        {
+          "entity": "song_info",
+          "startPos": 14,
+          "endPos": 20
+        },
+        {
+          "entity": "in_between",
+          "startPos": 22,
+          "endPos": 27
+        },
+        {
+          "entity": "song_info",
+          "startPos": 29,
+          "endPos": 33
+        },
+        {
+          "entity": "post_song",
+          "startPos": 35,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "stop playing that awful dance music",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "stop playing that song",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "stop playing that, i do not like it.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "stop the music for a bit",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "stop the music for a second please.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "switch all the songs on my playlist around.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "temporarily stop this song.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "that was a terrible song.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "the music is too loud",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "the song it too loud please turn the volume down",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "this isn't loud enough",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "this music is terrible.",
+      "intent": "exclude",
+      "entities": []
+    },
+    {
+      "text": "turn down the sound on my music.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "turn on john lennon's imagine",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 6
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 28
+        },
+        {
+          "entity": "song_info",
+          "startPos": 8,
+          "endPos": 20
+        },
+        {
+          "entity": "song_info",
+          "startPos": 22,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "turn on tamally maak by amr diab",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 6
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 31
+        },
+        {
+          "entity": "song_info",
+          "startPos": 8,
+          "endPos": 19
+        },
+        {
+          "entity": "in_between",
+          "startPos": 21,
+          "endPos": 22
+        },
+        {
+          "entity": "song_info",
+          "startPos": 24,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "turn the music setting to pause.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "turn the music up louder.",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "turn the volume up",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "turn up the volume to max, please",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "volume",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "what are features of pop music?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what are the hits by bon jovi?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what artist is responsible for introducing hip hop?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what classic rock bands have i got to play_music from",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what country channels are there",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what country singer has the most hit singles?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what gender is the lead singer of caravan palace?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what instruments are usually played in blues music?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is beyonces latest song",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is cher's last name?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is the best blues albums of all time?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is the biggest hit song of madonna?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is the current highest charting drake song?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is the genre of dua lipa songs",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is the highest charting rap song at the moment?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is the highest grossing track ever recorded by michael jackson?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what is the name of the first album from alicia keys?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what jazz titles do i have?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what was britney spears' most recent album?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what was the breakthrough hit for the dave matthews band?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what was the first jazz song?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what was the number one pop song in 2006?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "what year was iron maiden formed",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "when did bow wow release his latest album?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "when did reggae originate?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "when was peter gabriel's most recent album?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "when was pop-punk first invented?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "when was the alternative rock band everclear formed?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "when was the oldie last kiss recorded and by whom.",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "when where the beatles founded?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "which is the best selling country artist",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "which is the most famous rihanna song?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "who is the best rock band ever",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "who is the famous hiphop singer?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "who is the most prolific writer of broadway show tunes?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "who was voted #1 country singer this year?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "who won this year's grammy for best r&b album?",
+      "intent": "answer_question",
+      "entities": []
+    },
+    {
+      "text": "would you play the sentinel by judas priest",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 13
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 42
+        },
+        {
+          "entity": "song_info",
+          "startPos": 15,
+          "endPos": 26
+        },
+        {
+          "entity": "in_between",
+          "startPos": 28,
+          "endPos": 29
+        },
+        {
+          "entity": "song_info",
+          "startPos": 31,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "would you please bring a pause to the music for the time being.",
+      "intent": "pause",
+      "entities": []
+    },
+    {
+      "text": "would you please lower the volume a little for me?",
+      "intent": "Volume",
+      "entities": []
+    },
+    {
+      "text": "would you please play some random 80's music for me?",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 25
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 51
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 27,
+          "endPos": 43
+        },
+        {
+          "entity": "post_song",
+          "startPos": 45,
+          "endPos": 51
+        }
+      ]
+    },
+    {
+      "text": "would you please shuffle in an order of your choice.",
+      "intent": "shuffle",
+      "entities": []
+    },
+    {
+      "text": "you can play that rock music.",
+      "intent": "play_music",
+      "entities": [
+        {
+          "entity": "pre_song",
+          "startPos": 0,
+          "endPos": 16
+        },
+        {
+          "entity": "song_parent",
+          "startPos": 0,
+          "endPos": 28
+        },
+        {
+          "entity": "genre_info",
+          "startPos": 18,
+          "endPos": 27
+        },
+        {
+          "entity": "post_song",
+          "startPos": 28,
+          "endPos": 28
+        }
+      ]
+    }
+  ],
+  "versionId": "0.2",
+  "name": "Regular App Music",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [
+    {
+      "name": "StopList",
+      "mode": true,
+      "words": "stop,pause,paused,stopped,pauses,discontinue,pausing,play,drop,next,stopping,previous,rest,hold,help",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "AnswerList",
+      "mode": true,
+      "words": "what,when,how,who,?,why,where,which,whom",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "ShuffleList",
+      "mode": true,
+      "words": "shuffle,shuffled,shuffling,randomize,random,rearrange,mix,mixed,mixing",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "VolumeList",
+      "mode": true,
+      "words": "loud,louder,quiet,quiter,lower",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "ExcludeList",
+      "mode": true,
+      "words": "remove,disgusting,awful,don't like,hate,don't play",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "song_info_help",
+      "mode": true,
+      "words": "play,listen,put on,I want to listen to,by,of,form,please play,please,could you please,play something,play some,can you,can you play some,can you play,?,.,please play the song,please play the track,turn on,play something by,play anything by,something from,something by,anything from,anything by,start playing,play the track,the track,the song,artist,the artist,band,the band,the group,group,i want to play some,i want to play,some,give me,give me some,lets play,let's play,can we get some,can we play some,i want a little,play the song,track,song,play the,how about,play a little,turn on a little,crank some,crank a little,switch to,a bit,for a bit,now",
+      "activated": true,
+      "enabledForAllModels": false
+    },
+    {
+      "name": "FromBy",
+      "mode": true,
+      "words": "from,by,sang by,from the artist,by the artist,of,by the band,from the band,from the group,by the group",
+      "activated": true,
+      "enabledForAllModels": false
+    }
+  ],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
+}
