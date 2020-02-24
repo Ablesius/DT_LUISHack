@@ -1,0 +1,2508 @@
+
+> LUIS application information
+> !# @app.name = Music_Application
+> !# @app.versionId = 0.2
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 3.0.0
+> !# @app.desc=MusicApp
+
+> # Intent definitions
+
+## answer_question
+- are there any rock songs that have won best musical score two years in a row
+- have the killers won any music awards
+- how long has j lo been making music
+- how many albums did prince release?
+- how many albums has katy perry created?
+- how many gold albums did elvis generate?
+- how old is hip hop
+- how old is the genre heavy metal
+- how old was janet jackson when she recorded her first album?
+- how speed is 70's rock?
+- in what year was the first album by david bowie released
+- is a new metal record out
+- is fresh prince hip hop?
+- is linkin park still together?
+- is van halen still active
+- what are features of pop music?
+- what are the hits by bon jovi?
+- what artist is responsible for introducing hip hop?
+- what classic rock bands have i got to play_music from
+- what country channels are there
+- what country singer has the most hit singles?
+- what gender is the lead singer of caravan palace?
+- what instruments are usually played in blues music?
+- what is beyonces latest song
+- what is cher's last name?
+- what is the best blues albums of all time?
+- what is the biggest hit song of madonna?
+- what is the current highest charting drake song?
+- what is the genre of dua lipa songs
+- what is the highest charting rap song at the moment?
+- what is the highest grossing track ever recorded by michael jackson?
+- what is the name of the first album from alicia keys?
+- what jazz titles do i have?
+- what was britney spears' most recent album?
+- what was the breakthrough hit for the dave matthews band?
+- what was the first jazz song?
+- what was the number one pop song in 2006?
+- what year was iron maiden formed
+- when did bow wow release his latest album?
+- when did reggae originate?
+- when was peter gabriel's most recent album?
+- when was pop-punk first invented?
+- when was the alternative rock band everclear formed?
+- when was the oldie last kiss recorded and by whom.
+- when where the beatles founded?
+- which is the best selling country artist
+- which is the most famous rihanna song?
+- who is the best rock band ever
+- who is the famous hiphop singer?
+- who is the most prolific writer of broadway show tunes?
+- who was voted #1 country singer this year?
+- who won this year's grammy for best r&b album?
+
+
+@ intent answer_question usesFeature AnswerList
+
+## exclude
+- can you stop playing this song?
+- cancel that one, not good.
+- change this song because i don't like its music
+- do not play any taylor swift music, i hate her sound.
+- do not play this kind of music
+- don't play country music please
+- i am not a big fan of this current track, i do not like it at all.
+- i am not enjoying that song, please stop playing it
+- i dislike this song please stop playing it
+- i do not care for this music.
+- i do not like any songs on this album
+- i dont like it.
+- i don't like that, please take it off the play list.
+- i don't like this music
+- i don't like this one, skip it.
+- i don't like this track.
+- i don't like this, change it please
+- i hate heavy metal.
+- i really do not like this song.
+- i'm not liking this song.
+- oh, i hate this song, stop it
+- ooh i don't like this
+- stop playing that awful dance music
+- stop playing that song
+- stop playing that, i do not like it.
+- that was a terrible song.
+- this music is terrible.
+
+
+@ intent exclude usesFeature ExcludeList
+
+## None
+
+
+## pause
+- can you pause please?
+- can you pause this song for a moment?
+- can you pause?
+- can you please pause
+- can you put the music on pause.
+- can you stop the music for a moment
+- hold my music at its current spot.
+- hold that song for a moment.
+- hold up, pause the song.
+- i have to go answer the door, please pause the song
+- i wish to pause the song now.
+- lets just pause it there for a minute
+- pause after this song
+- pause music while i make a phone call
+- pause this song
+- pause this track, please
+- pause, please
+- pause.
+- please pause
+- please pause for me
+- please pause so i can make a call.
+- please pause the song.
+- stop the music for a bit
+- stop the music for a second please.
+- temporarily stop this song.
+- turn the music setting to pause.
+- would you please bring a pause to the music for the time being.
+
+
+@ intent pause usesFeature StopList
+
+## play_music
+- {@song_parent={@pre_song=can you play} {@song_info=adeles} {@post_song=latest album}}
+- {@song_parent={@pre_song=can you play music by} {@song_info=prince}}
+- {@song_parent={@pre_song=can you play some} {@genre_info=contemporary music}}
+- {@song_parent={@pre_song=can you play some} {@in_between=rihanna} {@post_song=please?}}
+- {@song_parent={@pre_song=can you play something from the} {@genre_info=disco} {@post_song=genre?}}
+- {@song_parent={@pre_song=can you play the country song} {@song_info=crazy beautiful}}
+- {@song_parent={@pre_song=can you play the lastest album of} {@song_info=rihanna}{@post_song=?}}
+- {@song_parent={@pre_song=can you play} {@song_info=track 1} {@in_between=of} {@song_info=adeles} {@post_song=new album}}
+- {@song_parent={@pre_song=can you play} {@song_info=track 2} {@in_between=of} {@song_info=prince's album 1999.}}
+- {@song_parent={@pre_song=can you play} {@song_info=track 5} {@in_between=of} {@song_info=billie eilish} {@post_song=first album}}
+- {@song_parent={@pre_song=can you please play the track} {@song_info=unfaithful}}
+- {@song_parent={@song_info=come to my window} {@in_between=is my favorite song by} {@song_info=melissa etheridge} {@post_song=please play it}}
+- {@song_parent={@pre_song=could you please play the newest single by} {@song_info=drake}{@post_song=?}}
+- {@song_parent={@pre_song=i wanna hear some} {@song_info=jain}}
+- {@song_parent={@pre_song=i want to hear} {@song_info=madonna}}
+- {@song_parent={@pre_song=i want to hear} {@song_info=opiate} {@in_between=by} {@song_info=tool}{@post_song=.}}
+- {@song_parent={@pre_song=i want to hear} {@song_info=taylor swift's} {@in_between=song} {@song_info=blank space}{@post_song=.}}
+- {@song_parent={@pre_song=i want to hear the song} {@song_info=songbird}{@post_song=.}}
+- {@song_parent={@pre_song=i want to listen to} {@song_info=bohemian rhapsody}}
+- {@song_parent={@pre_song=i want to listen to} {@song_info=elo}{@post_song=, lets play some}}
+- {@song_parent={@pre_song=i want to listen to} {@genre_info=industrial music}}
+- {@song_parent={@pre_song=i want to listen to} {@song_info=skinny puppy}}
+- {@song_parent={@pre_song=i want to play a} {@genre_info=jazz song} {@in_between=from the} {@genre_info=50's.}}
+- {@song_parent={@pre_song=i want to play a song by the band} {@song_info=nirvana}{@post_song=.}}
+- {@song_parent={@pre_song=i want to play} {@song_info=always for you}}
+- {@song_parent={@pre_song=i want to play} {@song_info=korn}}
+- {@song_parent={@pre_song=i want to play the song} {@song_info=stairway to heaven} {@post_song=now}}
+- {@song_parent={@pre_song=i want you to play} {@song_info=mr blue sky} {@in_between=by} {@post_song=elo next}}
+- {@song_parent={@pre_song=i wish to play} {@song_info=hello i love you} {@in_between=by} {@song_info=the doors}{@post_song=.}}
+- {@song_parent={@pre_song=i would like to hear the} {@song_info=third track} {@in_between=from the first} {@song_info=led zeppelin} {@post_song=album}}
+- {@song_parent={@pre_song=i would like to hear} {@song_info=unhappy birthday} {@in_between=from} {@song_info=the smiths}}
+- {@song_parent={@pre_song=i would like to listen to} {@song_info=nine inch nails}{@post_song=, please}}
+- {@song_parent={@pre_song=i would like you to play} {@song_info=ban all the music} {@post_song=for me, please}}
+- {@song_parent={@pre_song=lets have a listen to} {@song_info=bohemian rhapsody} {@in_between=by} {@song_info=queen}}
+- {@song_parent={@pre_song=lets have} {@song_info=don't stop me now} {@in_between=by} {@song_info=queen}}
+- {@song_parent={@pre_song=play a} {@genre_info=country song} {@in_between=by} {@song_info=carrie underwood}}
+- {@song_parent={@pre_song=play a} {@genre_info=rock song} {@in_between=by} {@song_info=led zepplin}{@post_song=.}}
+- {@song_parent={@pre_song=play a} {@genre_info=soul song} {@post_song=for me}}
+- {@song_parent={@pre_song=play anything by} {@song_info=frank sinatra}}
+- {@song_parent={@pre_song=play} {@song_info=boney james jazz}}
+- {@song_parent={@pre_song=play} {@song_info=boyfriend} {@in_between=song by} {@song_info=ariana grande feat social house}}
+- {@song_parent={@pre_song=play} {@song_info=boys don't cry} {@in_between=from} {@song_info=the cure}}
+- {@song_parent={@pre_song=play} {@song_info=closer} {@post_song=again, please}}
+- {@song_parent={@pre_song=play} {@song_info=closer} {@in_between=by} {@song_info=nine inch nails}{@post_song=, please}}
+- {@song_parent={@pre_song=play} {@song_info=comics} {@in_between=by} {@song_info=caravan palace}}
+- {@song_parent={@pre_song=play} {@song_info=drake}}
+- {@song_parent={@pre_song=play} {@song_info=elton john}}
+- {@song_parent={@pre_song=play} {@song_info=get right} {@in_between=by} {@song_info=jlo}}
+- {@song_parent={@pre_song=play} {@song_info=god only knows} {@in_between=by} {@song_info=the beach boys}{@post_song=.}}
+- {@song_parent={@pre_song=play} {@song_info=heavy metal} {@post_song=songs}}
+- {@song_parent={@pre_song=play} {@song_info=i want it that way} {@in_between=by} {@song_info=iron maiden}}
+- {@song_parent={@pre_song=play} {@song_info=in the shadows} {@in_between=by} {@song_info=the rasmus}{@post_song=.}}
+- {@song_parent={@pre_song=play} {@song_info=jesus take the wheel} {@in_between=by} {@song_info=carrie underwood}}
+- {@song_parent={@pre_song=play} {@song_info=journey works}{@post_song=.}}
+- {@song_parent={@pre_song=play} {@song_info=like a prayer} {@in_between=from} {@song_info=madonna}{@post_song=.}}
+- {@song_parent={@pre_song=play me} {@song_info=grace} {@in_between=by} {@song_info=jeff buckley}{@post_song=.}}
+- {@song_parent={@pre_song=play} {@song_info=mettalica}}
+- {@song_parent={@pre_song=play} {@song_info=nas}}
+- {@song_parent={@pre_song=play} {@song_info=red hot chilli peppers}}
+- {@song_parent={@pre_song=play} {@genre_info=rock and roll}}
+- {@song_parent={@pre_song=play} {@song_info=run to the hills}}
+- {@song_parent={@pre_song=play} {@song_info=shake it off} {@in_between=by} {@song_info=taylor swift}}
+- {@song_parent={@pre_song=play some} {@genre_info=r&b} {@post_song=for me please.}}
+- {@song_parent={@pre_song=play some songs from} {@song_info=michael jackson}{@post_song=, please}}
+- {@song_parent={@pre_song=play some} {@genre_info=speed metal}}
+- {@song_parent={@pre_song=play some} {@song_info=vintage judas priest}}
+- {@song_parent={@pre_song=play something by} {@song_info=hozier}}
+- {@song_parent={@pre_song=play something by} {@song_info=madonna}}
+- {@song_parent={@pre_song=play that} {@song_info=eminem} {@post_song=song}}
+- {@song_parent={@pre_song=play the} {@song_info=celine dion} {@in_between=track} {@song_info=my heart will go on}{@post_song=.}}
+- {@song_parent={@pre_song=play the latest} {@genre_info=pop} {@post_song=hits.}}
+- {@song_parent={@pre_song=play the most recent} {@song_info=taylor swift} {@post_song=releases}}
+- {@song_parent={@pre_song=play} {@song_info=the rolling stones}}
+- {@song_parent={@pre_song=play} {@song_info=the sentinel} {@in_between=by} {@song_info=judas priest}}
+- {@song_parent={@pre_song=play the track} {@song_info=cake in the ocean}}
+- {@song_parent={@pre_song=play the track} {@song_info=somebody that i used to know}}
+- {@song_parent={@pre_song=play the track} {@song_info=sugar} {@in_between=by} {@song_info=maroon 5.}}
+- {@song_parent={@pre_song=play the track} {@song_info=who let the dogs out}}
+- {@song_parent={@pre_song=play} {@song_info=track 1} {@in_between=of} {@song_info=ani difranco's dilate}.}
+- {@song_parent={@pre_song=play} {@song_info=track 4} {@in_between=on the} {@song_info=frank sinatra} {@post_song=disk.}}
+- {@song_parent={@pre_song=play} {@song_info=track 5} {@post_song=please.}}
+- {@song_parent={@pre_song=play} {@song_info=track 8} {@post_song=on this disk please.}}
+- {@song_parent={@pre_song=play} {@song_info=track five} {@post_song=now}}
+- {@song_parent={@pre_song=play} {@song_info=track three} {@in_between=of} {@song_info=janet jackson}}
+- {@song_parent={@pre_song=play} {@song_info=track two} {@in_between=of} {@song_info=james brown} {@post_song=second album}}
+- {@song_parent={@pre_song=play} {@song_info=yellow submarine} {@in_between=by} {@song_info=the beatles}}
+- {@song_parent={@pre_song=please play a} {@genre_info=pop song}{@post_song=.}}
+- {@song_parent={@pre_song=please play any song by} {@song_info=queen}}
+- {@song_parent={@pre_song=please play} {@genre_info=death metal}}
+- {@song_parent={@pre_song=please play} {@song_info=get up 10}}
+- {@song_parent={@pre_song=please play} {@genre_info=hip hop}}
+- {@song_parent={@pre_song=please play} {@song_info=how great thou art} {@in_between=by} {@song_info=elvis}{@post_song=.}}
+- {@song_parent={@pre_song=please play} {@song_info=million reasons} {@in_between=by} {@song_info=lady gaga}}
+- {@song_parent={@pre_song=please play music by} {@song_info=madonna}}
+- {@song_parent={@pre_song=please play} {@song_info=run to the hills} {@in_between=by} {@song_info=iron maiden}}
+- {@song_parent={@pre_song=please play some} {@song_info=ja rule}}
+- {@song_parent={@pre_song=please play some of} {@song_info=cher's} {@post_song=music}}
+- {@song_parent={@pre_song=please play some} {@genre_info=r and b}}
+- {@song_parent={@pre_song=please play the song} {@song_info=gravity} {@in_between=by} {@song_info=sara bareilles}}
+- {@song_parent={@pre_song=please play the song} {@song_info=hurt} {@in_between=by} {@song_info=nine inch nails}}
+- {@song_parent={@pre_song=please play the song} {@song_info=wall of water} {@in_between=by} {@song_info=mayhem}}
+- {@song_parent={@pre_song=please play} {@song_info=track 10} {@in_between=of} {@song_info=the beatles} {@post_song=album listed first.}}
+- {@song_parent={@pre_song=please play} {@song_info=track 2} {@in_between=of} {@song_info=kiss}{@post_song=.}}
+- {@song_parent={@pre_song=please put some} {@genre_info=folk music} {@post_song=on.}}
+- {@song_parent={@pre_song=please start playing} {@song_info=track 5} {@post_song=of the current album in my favorite list.}}
+- {@song_parent={@pre_song=please would you play} {@song_info=amsterdam} {@in_between=by} {@song_info=nothing but thieves} {@post_song=at an acceptable volume.}}
+- {@song_parent={@pre_song=please, play some} {@genre_info=rap music} {@post_song=for me}}
+- {@song_parent={@pre_song=put on} {@song_info=hello} {@in_between=by} {@song_info=adele}}
+- {@song_parent={@pre_song=put on some} {@genre_info=jazz} {@post_song=for me}}
+- {@song_parent={@pre_song=put on the track} {@song_info=rockstar} {@in_between=by} {@song_info=post malone}}
+- {@song_parent={@pre_song=start playing} {@song_info=skinny love} {@in_between=by} {@song_info=bon iver}}
+- {@song_parent={@pre_song=start playing} {@song_info=track 1} {@in_between=of the} {@song_info=ac/dc} {@post_song=album}}
+- {@song_parent={@pre_song=turn on} {@song_info=john lennon's} {@song_info=imagine}}
+- {@song_parent={@pre_song=turn on} {@song_info=tamally maak} {@in_between=by} {@song_info=amr diab}}
+- {@song_parent={@pre_song=would you play} {@song_info=the sentinel} {@in_between=by} {@song_info=judas priest}}
+- {@song_parent={@pre_song=would you please play some} {@genre_info=random 80's music} {@post_song=for me?}}
+- {@song_parent={@pre_song=you can play that} {@genre_info=rock music}{@post_song=.}}
+
+
+@ intent play_music usesFeatures song_info_help,FromBy
+
+## shuffle
+- can you please shuffle this playlist?
+- can you put shuffle mode on please?
+- change the order of the music.
+- do you wnat to shuflle the music?
+- give me a good shuffle of my favorite artists.
+- i want the music on shuffle mode.
+- i want to mix that music.
+- i wish to shuffle some songs.
+- lets have a random shuffle and play
+- mix the order of songs of my madonna playlist.
+- mix up my playlist and shuffle all of the tracks.
+- play songs in no particular order.
+- play the songs in no particular order
+- please change the order.
+- please shuffle
+- please shuffle in my playlist
+- please shuffle the song
+- please shuffle to the next song
+- put these songs on random
+- shuffle on nina's i phone
+- shuffle the album by beyonce.
+- shuffle the disks please.
+- shuffle the playlist 3
+- shuffle the playlist please
+- skip to the next music track please
+- switch all the songs on my playlist around.
+- would you please shuffle in an order of your choice.
+
+
+@ intent shuffle usesFeature ShuffleList
+
+## Volume
+- can you please change the volume by 8 points
+- can you turn down the music volume
+- can you turn the music down a little bit?
+- can you turn the volume up by 10 points
+- can you turn the volume up by two settings?
+- can you turn the volume up please?
+- could you raise the volume a little bit
+- i want to adjust the volume
+- i want you to crank up the volume.
+- increase the sound volume
+- increase the volume of the music
+- just level up the music now.
+- just turn the volume down a bit
+- lower the volume of this song.
+- please lower the volume
+- please set the music to a quieter level.
+- please turn down the music.
+- please turn up the volume one level
+- pump up that volume for this song.
+- the music is too loud
+- the song it too loud please turn the volume down
+- this isn't loud enough
+- turn down the sound on my music.
+- turn the music up louder.
+- turn the volume up
+- turn up the volume to max, please
+- volume
+- would you please lower the volume a little for me?
+
+
+@ intent Volume usesFeature VolumeList
+
+> # Entity definitions
+
+@ ml song_parent usesFeatures song_info_help,FromBy
+    - @ ml pre_song usesFeature song_info_help
+    - @ ml post_song usesFeature song_info_help
+    - @ ml song_info
+    - @ ml in_between usesFeature FromBy
+    - @ ml genre_info usesFeature song_genre
+
+
+
+> # PREBUILT Entity definitions
+
+@ prebuilt datetimeV2 hasRole role1
+
+@ prebuilt number hasRoles first,second
+
+
+> # Phrase list definitions
+
+@ phraselist StopList(interchangeable) = 
+	- stop,pause,paused,stopped,pauses,discontinue,pausing,play,drop,next,stopping,previous,rest,hold,help
+
+@ phraselist AnswerList(interchangeable) = 
+	- what,when,how,who,?,why,where,which,whom
+
+@ phraselist ShuffleList(interchangeable) = 
+	- shuffle,shuffled,shuffling,randomize,random,rearrange,mix,mixed,mixing
+
+@ phraselist VolumeList(interchangeable) = 
+	- loud,louder,quiet,quiter,lower
+
+@ phraselist ExcludeList(interchangeable) = 
+	- remove,disgusting,awful,don't like,hate,don't play
+
+@ phraselist song_info_help(interchangeable) = 
+	- play,listen,put on,I want to listen to,by,of,form,please play,please,could you please,play something,play some,can you,can you play some,can you play,?,.,please play the song,please play the track,turn on,play something by,play anything by,something from,something by,anything from,anything by,start playing,play the track,the track,the song,artist,the artist,band,the band,the group,group,i want to play some,i want to play,some,give me,give me some,lets play,let's play,can we get some,can we play some,i want a little,play the song,track,song,play the,how about,play a little,turn on a little,crank some,crank a little,switch to,a bit,for a bit,now
+
+@ phraselist FromBy(interchangeable) = 
+	- from,by,sang by,from the artist,by the artist,of,by the band,from the band,from the group,by the group
+
+
+> # List entities
+
+@ list song_genre = 
+	- genre_list :
+		- schlager
+		- deathrash metal
+		- boi
+		- secular hymn
+		- techstep
+		- music of san
+		- rapcore
+		- indigenous nigerian music
+		- songs of brittany
+		- en espanol
+		- sevdalinka
+		- sailor songs
+		- drill music
+		- bothy band
+		- piano blues
+		- deathrock
+		- canaria
+		- hip house
+		- bush ballad
+		- deathgrind
+		- stride
+		- neoclassical new-age music
+		- neon pop
+		- chaoui
+		- kuduro
+		- vals
+		- indigenous australian
+		- taarab
+		- cumbia
+		- oppari
+		- chromatic fantasia
+		- porro
+		- lounge music
+		- traditional country
+		- rockabilly
+		- meringue
+		- black
+		- pop-jazz
+		- lullaby
+		- electro
+		- merengue music
+		- biomusic
+		- thrash metal
+		- phase
+		- national socialist black metal
+		- tonk
+		- baroque music
+		- dragoste
+		- industrial techno
+		- jazzcore
+		- latin soul
+		- improvisation
+		- electronics
+		- big room house
+		- mashup
+		- heartland rock
+		- khaliji
+		- sound system
+		- acid techno
+		- school hip hop
+		- sailor's song
+		- underground
+		- kenyan
+		- art rock
+		- catalan rumba
+		- zoblazo
+		- dream metal
+		- crossover prog
+		- hungarian rock
+		- folk & roll
+		- adult hits
+		- folk music of england
+		- christian metal
+		- huapango
+		- sangita
+		- rock and roll
+		- neo-classical metal
+		- motown
+		- caliente
+		- wind
+		- m-base
+		- music in dagestan
+		- quebec hip-hop
+		- turkish folk music
+		- indigenous nigerian
+		- trock
+		- funeral march
+		- folk rhythm
+		- noir
+		- funky
+		- concerted madrigal
+		- basque
+		- vaudeville-operette
+		- milonga-candombe
+		- music of the cayman islands
+		- show tune
+		- volkstümliche musik
+		- parody
+		- heavy hardcore
+		- minimal
+		- rock music in cuba
+		- contemporary worship
+		- punk rock
+		- ballet d'action
+		- saravane
+		- synth-pop
+		- hornpipe
+		- cabaret
+		- fast polka
+		- scottish gaelic punk
+		- electro hop
+		- chico
+		- pimba
+		- kindie rock
+		- music in the udmurt republic
+		- doo-wop
+		- pagan folk
+		- death industrial
+		- abwe
+		- tone
+		- youth crew
+		- music of mozambique
+		- indie folk
+		- martial
+		- kawaii metal
+		- yass
+		- neo-medieval music
+		- sound
+		- progressive pop
+		- basque music
+		- children's
+		- horror punk
+		- armenian folk music
+		- grindie
+		- crunkcore
+		- illbient
+		- chrieng brunh
+		- speed garage
+		- of brittany
+		- country rock
+		- hymn concertato
+		- music of guangxi
+		- comedy rock
+		- ambient trance
+		- chutney music
+		- video game music
+		- pìobaireachd
+		- ambient dub
+		- early baroque music
+		- brass
+		- bass music
+		- music in krasnodar
+		- modal jazz
+		- chicago blues
+		- music of navarre and la rioja
+		- abidat rma
+		- funk rock
+		- nu metal
+		- guyue
+		- regia
+		- dirt
+		- musical comedy
+		- pakistani semi-classical
+		- pieces for harpsichord
+		- slam death metal
+		- tswana music
+		- coladeira
+		- broder singer
+		- tierra caliente
+		- kizomba
+		- fugue
+		- kurdish music
+		- jota aragonese
+		- folk pop
+		- club
+		- chimurenga
+		- hymn
+		- post-grunge
+		- hiranaam
+		- italian hip hop
+		- line dance
+		- grrrl
+		- orchestral song
+		- imene metua
+		- christian punk
+		- boogie-woogie
+		- bocet
+		- futurepop
+		- gaelic
+		- tsyganskiy romance
+		- york blues
+		- celtic music
+		- sleaze metal
+		- 'n' roll
+		- christian country music
+		- digital hardcore
+		- jazzstep
+		- boeremusiek
+		- 2 tone
+		- music of the andaman and nicobar
+		- hop soul
+		- christian country
+		- vesnianky
+		- bitpop
+		- viking metal
+		- indian folk music
+		- snap music
+		- drone metal
+		- christian music
+		- programme music
+		- soft rock
+		- classic rock
+		- post-black metal
+		- smooth soul
+		- brega
+		- music of curaçao
+		- jazz samba
+		- cajun music
+		- son calentano
+		- sawt
+		- gamelan gambang
+		- future house
+		- cumbia villera
+		- kpanlogo
+		- singing
+		- yürük semai
+		- taiwanese rock
+		- minimal electro
+		- c-pop
+		- theatre music
+		- new yorkshire
+		- band
+		- surf
+		- burlesque
+		- nigun
+		- bop
+		- mumble rap
+		- christian hip hop
+		- industrial dance
+		- manele
+		- new wave of new wave
+		- goa trance
+		- kenyan music
+		- japanese hardcore
+		- cubano
+		- xi'an guyue
+		- space age pop
+		- queercore
+		- music of limousin
+		- acid trance
+		- street punk
+		- early dancehall
+		- changa
+		- singer
+		- surf music
+		- guaguancó
+		- downer metal
+		- anthem house
+		- afro-peruvian
+		- habanera
+		- eurodance
+		- colossal baroque
+		- lyric singing
+		- trap
+		- kayōkyoku
+		- tv track
+		- mizrahi
+		- nerd music
+		- hard house
+		- pop music
+		- mathcore
+		- in musica
+		- anarcho-punk
+		- post-punk revival
+		- post-britpop
+		- new prog
+		- progressive rock
+		- folk music of
+		- instrumental music
+		- free jazz
+		- mozambique
+		- big drum
+		- semi-classical
+		- symphonic
+		- sertaneja
+		- blue yodeling
+		- bosnian rock
+		- nu-funk
+		- romani
+		- punk blues
+		- son montuno
+		- ballad
+		- wave of ska
+		- dolewave
+		- rebetiko
+		- ranchera
+		- noise
+		- parody music
+		- trot
+		- french baroque
+		- festejo
+		- gnawa music
+		- brostep
+		- sama'i
+		- downtempo
+		- turbo-folk
+		- dutch house
+		- guarania
+		- german rock
+		- hip-hop
+		- nigerien hip hop
+		- west coast hip hop
+		- bard-rock
+		- neue musik
+		- acidcore
+		- hardcore punk
+		- jazz waltz
+		- hipster hop
+		- semai
+		- nu jazz
+		- basque radical rock
+		- patriotic song
+		- ottoman classical
+		- gan
+		- dream pop
+		- runo song
+		- revival
+		- abecedarian hymn
+		- zeuhl
+		- music in
+		- light music
+		- music of peru
+		- instrumental jazz
+		- neoclassicism
+		- hop tuga
+		- secular music
+		- punta
+		- old-time
+		- and bass
+		- gagok
+		- township
+		- cabaret rock
+		- alegre
+		- nuubaat
+		- eclecticism in
+		- grunge
+		- thrashcore
+		- gospel reggae
+		- ovi (music)
+		- andaluz
+		- melodic metalcore
+		- brown-eyed soul
+		- concerto
+		- speed metal
+		- noise rock
+		- chicano rap
+		- jesus
+		- worldbeat
+		- villera
+		- brutal death metal
+		- music in nenets autonomous
+		- old-time music
+		- zamba
+		- concitato
+		- breton rock
+		- ringbang
+		- death metal
+		- music of british
+		- trad jazz
+		- spiritual
+		- punk jazz
+		- contemporary classical
+		- orleans soul
+		- tonada
+		- rapso
+		- afro-jazz
+		- american folk music
+		- skool breaks
+		- wagnerian rock
+		- baithak gana
+		- ragga
+		- incidental music
+		- bmg movement
+		- baggy
+		- sevillanas
+		- conscious hip hop
+		- trip rock
+		- berceuse
+		- lam luang
+		- samba reggae
+		- champeta
+		- duo
+		- europop
+		- ambient techno
+		- neo kyma
+		- bend-skin
+		- zydeco
+		- arabic
+		- age pop
+		- rocksteady
+		- afro-cuban jazz
+		- ethereal wave
+		- death-doom
+		- outlaw country
+		- banda sinfónica
+		- phleng thai sakon
+		- gana
+		- bereznianka
+		- swamp blues
+		- tecno-rumba
+		- summer song
+		- acoustic
+		- ceòl beag
+		- white power music
+		- country folk
+		- blackgaze
+		- gadhon
+		- arena rock
+		- hip hop soul
+		- raw black metal
+		- american hip hop
+		- electronic body music
+		- free rock
+		- dhaanto
+		- yodeling
+		- ragga pop
+		- proibidão
+		- depressive black metal
+		- crossover thrash
+		- afrobeat
+		- de dragoste
+		- techno
+		- melodic death metal
+		- rap metal
+		- timba
+		- circus music
+		- beat
+		- shock rock
+		- postmodern
+		- gaana
+		- anti-folk
+		- electroclash
+		- morenada
+		- sambalanço
+		- politrock
+		- experimental hip hop
+		- aguinaldo
+		- kar
+		- jiuta
+		- ultra metal
+		- for harpsichord
+		- chicago soul
+		- famo
+		- complexe
+		- mass
+		- imene tuki
+		- cuarteto
+		- tejano
+		- garage rock
+		- patriotic
+		- electronic dance
+		- hyphy
+		- orchestral pop
+		- hard trance
+		- popular music
+		- laïko
+		- electrostep
+		- k-pop
+		- crew
+		- drum and bass
+		- broken beat
+		- post-progressive
+		- baião
+		- frevo
+		- funk soul
+		- balearic trance
+		- happy hardcore
+		- go-go
+		- napoletana
+		- wienerlied
+		- political punk
+		- huaylarsh
+		- avant-garde
+		- progressive house
+		- wizard rock
+		- kilam
+		- armenian folk
+		- nhạc tài tử
+		- symphonic metal
+		- combined rhythm
+		- rock in opposition
+		- rera
+		- canon
+		- phase music
+		- tribal house
+		- elevator
+		- vallenato
+		- seconda pratica
+		- psychedelic music
+		- tejano music
+		- space ambient
+		- concert polka
+		- independent music
+		- yé-yé
+		- carnatic
+		- medieval metal
+		- electronic music
+		- machine-pop
+		- jazz
+		- folk
+		- neoclassical dark wave
+		- ohangla dance
+		- adult contemporary music
+		- acid house
+		- mákina
+		- normals
+		- música popular brasileira
+		- cantopop
+		- gengeton
+		- contemporary folk
+		- pinoy rock
+		- art punk
+		- nomine
+		- enka
+		- australian hip hop
+		- rock music in ireland
+		- nk-pop
+		- electroacoustic
+		- afro-peruvian music
+		- symphonic power metal
+		- french pop
+		- música sertaneja
+		- israeli rock
+		- skweee
+		- soukous
+		- ping
+		- tech trance
+		- pagan metal
+		- stronda
+		- classical music
+		- eurobeat
+		- rap rock
+		- hardstep
+		- latin trap
+		- romantic music
+		- konzert
+		- tune
+		- sanjo
+		- music of jharkhand
+		- music of west
+		- aria
+		- ghetto house
+		- gothic rock
+		- gothenburg metal
+		- chimurenga music
+		- bogino duu
+		- hipco music
+		- gaga
+		- pop punk
+		- techno body
+		- raga rock
+		- new wave of american heavy metal
+		- de fusion
+		- peruvian waltz
+		- pirekua
+		- muziki wa dansi
+		- quimbe
+		- himene tarava
+		- neo-medieval
+		- early music
+		- igbo rap
+		- coast hip hop
+		- organ repertoire
+		- campursari
+		- metalcore
+		- pagan folk music
+		- bluegrass music
+		- irish traditional
+		- revolution summer
+		- and irish
+		- country blues
+		- new pop
+		- louisiana blues
+		- music of hebei
+		- and roll
+		- salon music
+		- extreme metal
+		- acoustic rock
+		- contemporary jewish religious
+		- kantu
+		- neo-bop jazz
+		- méringue
+		- finnish rock
+		- funaná
+		- were music
+		- haitian hip hop
+		- cyber metal
+		- oltului
+		- zouglou
+		- music in tatarstan
+		- nu metalcore
+		- vaporwave
+		- lewoz
+		- secular
+		- bluegrass
+		- music in astrakhan
+		- rara
+		- bavarian polka
+		- psychobilly
+		- dub
+		- romanian rock
+		- bay area thrash metal
+		- russian romance
+		- pastorella
+		- tuki
+		- latin hip hop
+		- pop-folk
+		- bubblegum pop
+		- ska punk
+		- cha-cha-chá
+		- mirror fugue
+		- lu
+		- bikutsi
+		- word
+		- shibuya-kei
+		- stoner rock
+		- euro disco
+		- neurofunk
+		- muzika
+		- flamenco rumba
+		- q-pop
+		- wave of british heavy metal
+		- american folk
+		- bandana thrash
+		- batá-rumba
+		- kaseko
+		- filin
+		- 'n' bass
+		- salsa dura
+		- beat music
+		- folktronica
+		- cante chico
+		- rap
+		- tallava
+		- crossover
+		- stile concitato
+		- bounce music
+		- ha diskan
+		- psytrance
+		- pratica
+		- post-rock
+		- verso
+		- onkyokei
+		- avant-prog
+		- darkstep
+		- indian rock
+		- sega music
+		- shanto
+		- tower
+		- guabina
+		- and heavy
+		- country rap
+		- bhatiali
+		- arabic rock
+		- anderen bands
+		- türkü
+		- pryvit
+		- progg
+		- national song
+		- nightcore
+		- odissi music
+		- harsh noise wall
+		- arabic pop
+		- afro-soul
+		- dark rock
+		- seggae
+		- p-funk
+		- taqwacore
+		- norwegian pop music
+		- gypsy jazz
+		- hip hop in the dominican republic
+		- exotica
+		- punta rock
+		- lovers rock
+		- dimotiko
+		- coast blues
+		- skiladiko
+		- wong shadow
+		- mugham
+		- nerd punk
+		- rhythm and grime
+		- ziglibithy
+		- saloma
+		- andalusian copla
+		- popular brasileira
+		- freak metal
+		- drone
+		- byzantine music
+		- goregrind
+		- nazi punk
+		- fantasia
+		- music in krasnodar krai
+		- pueblo music
+		- dutch-language music
+		- sogak
+		- new orleans soul
+		- polo
+		- reggae
+		- mbalax
+		- makwaya
+		- spanish rock
+		- epic
+		- no-fi
+		- dansband
+		- american march
+		- ambient pop
+		- gong kebyar
+		- florida death metal
+		- sentimental ballad
+		- rave
+		- rigsar
+		- political music
+		- early
+		- muiñeira
+		- kertok
+		- classical
+		- compas
+		- british blues
+		- glitch hop
+		- technopop
+		- munggang
+		- indigenous music
+		- proto-prog
+		- yuka
+		- melodic black metal
+		- of argentina
+		- & roll
+		- freak folk
+		- chinese hip hop
+		- slowcore
+		- modern country
+		- malhun
+		- taqtuqa
+		- neotraditional country
+		- indian classical music
+		- dunedin sound
+		- sadra
+		- city club
+		- electroacoustic improvisation
+		- gospel blues
+		- outsider house
+		- ambient jungle
+		- modinha
+		- ragga jungle
+		- lord rock
+		- regional mexican
+		- new york hardcore
+		- montuno
+		- drumstep
+		- underground music
+		- texas blues
+		- sunshine pop
+		- suling
+		- seis
+		- shashmaqam
+		- pop
+		- comédie en vaudevilles
+		- ethio-jazz
+		- music in the komi republic
+		- malaysian pop
+		- boogie
+		- naamyam
+		- horror music
+		- chut-kai-pang
+		- meadhonach
+		- folk music
+		- orchestral
+		- zarzuela
+		- zimdancehall
+		- post-industrial music
+		- drill
+		- minimal glitch
+		- music of krasnoyarsk
+		- tyrolienne
+		- chill-out music
+		- cartageneras
+		- turkish pop
+		- french organ school
+		- pop soul
+		- norteño
+		- intelligent dance
+		- italo house
+		- soulful house
+		- symphonic mugam
+		- traditional metal
+		- hyangak
+		- akiba-pop
+		- southern gospel
+		- cello rock
+		- production
+		- ballad tradition
+		- freakbeat
+		- hop in the dominican republic
+		- rhythm and blues
+		- vocal house
+		- hits
+		- shidaiqu
+		- hutsulka
+		- beste
+		- and blues
+		- music in ingushetia
+		- african-american
+		- tecnocumbia
+		- zamba alegre
+		- new-age music
+		- guitar music
+		- jump blues
+		- gharnati music
+		- dubstyle
+		- cuban rumba
+		- coon song
+		- avant-garde pop
+		- miami bass
+		- hop
+		- galician rumba
+		- progressive folk
+		- shadow
+		- cifra
+		- in opposition
+		- turkish pop music
+		- folk rock
+		- fusion
+		- slavic folk music
+		- charanga-vallenata
+		- hardstyle
+		- noise hop
+		- harp
+		- radical rock
+		- nerd-folk
+		- political song
+		- nasheed
+		- choral
+		- pirate metal
+		- northwest wind
+		- tamborera
+		- trova
+		- fasıl
+		- benga
+		- ragga hip hop
+		- native american hip hop
+		- neue volksmusik
+		- cowpunk
+		- new wave
+		- jota
+		- soul blues
+		- sufi rock
+		- angura kei
+		- maroon music
+		- kundiman
+		- rock opera
+		- chamber music
+		- christian alternative rock
+		- film score
+		- pornogrind
+		- music of alberta
+		- jack swing
+		- 2-step garage
+		- groove metal
+		- revival punk
+		- hasidic music
+		- tribe
+		- rock
+		- violento
+		- chầu văn
+		- nerdcore
+		- club house
+		- oratorio
+		- choral music
+		- nortec
+		- dark ambient
+		- kwakwaka'wakw
+		- boxes summer 2016 tour
+		- step metal
+		- industrial coldwave
+		- takht
+		- teen pop
+		- detroit techno
+		- gombhira
+		- trikiti
+		- plena
+		- novelty song
+		- psychedelic soul
+		- gothic music
+		- self-cover
+		- deep house
+		- new acoustic music
+		- avant-garde music
+		- nangma
+		- and grime
+		- gamelan siteran
+		- rock de fusión
+		- trap music
+		- funk carioca
+		- oriental metal
+		- latin metal
+		- korean hip hop
+		- gånglåt
+		- opera
+		- acoustic blues
+		- oshare-kei
+		- aboriginal rock
+		- tappa
+		- modern rock
+		- peruvian cumbia
+		- music of lebanon
+		- afro/cosmic
+		- uk drill
+		- cassation
+		- new beat
+		- instrumental rock
+		- patriotic music
+		- zamrock
+		- reggae rock
+		- tecno brega
+		- samba-canção
+		- reggae fusion
+		- hindustani classical music
+		- arabic music
+		- persian traditional
+		- uk funky
+		- jewish music
+		- galante music
+		- neoclassical new-age
+		- tientos
+		- schranz
+		- gothic metal
+		- seminole
+		- isolationism
+		- son cubano
+		- stoner metal
+		- programme
+		- inuit
+		- music of israel
+		- congolese rumba
+		- dub poetry
+		- children's music
+		- payada
+		- en vaudevilles
+		- nuevo tango
+		- york hardcore
+		- psychedelic folk
+		- drone music
+		- vallenato-salsa
+		- free improvisation
+		- filmi qawwali
+		- bubblegum dance
+		- western music
+		- chillstep
+		- anthem
+		- slavic folk
+		- swing music
+		- looping
+		- gaúcho rock
+		- house music
+		- tatar rock
+		- battle rap
+		- uruguayan punk
+		- postmodern music
+		- geistliches lied
+		- trønder rock
+		- tchamassi
+		- bhangra
+		- taiwanese folk music
+		- new wave of british heavy metal
+		- liturgical music
+		- black metal
+		- romantic flow
+		- nouvelle chanson
+		- balwo
+		- twee pop
+		- calypso
+		- paisley underground
+		- hofii
+		- mugam
+		- geek rock
+		- maloya
+		- industrial hip hop
+		- britpop
+		- doom
+		- bravura
+		- movement
+		- experimental music
+		- popular
+		- theatre
+		- jazz fusion
+		- galante
+		- glam rock
+		- ritual ambient
+		- aleatoric
+		- folkhop
+		- arabic pop music
+		- country pop
+		- uk garage
+		- éntekhno
+		- neues geistliches lied
+		- ovsenki
+		- noisegrind
+		- latin jazz
+		- motswako
+		- gambang
+		- hardcore hip hop
+		- ajisari
+		- cavacha
+		- funky house
+		- dutch-language
+		- d'action
+		- funk
+		- reductionism
+		- martial industrial
+		- afro pop music
+		- tropotianka
+		- baroque music of the british isles
+		- electric blues
+		- wave of new wave
+		- mambo
+		- kanto
+		- country
+		- epic metal
+		- experimental dub
+		- grime
+		- glam
+		- chiptune
+		- afro/cosmic music
+		- rock music
+		- country and irish
+		- post-punk
+		- chamarrita
+		- occult rock
+		- lounge rock
+		- nisiotika
+		- baroque music of the british
+		- jazz-funk
+		- vishnupada
+		- fandango
+		- the normals
+		- medieval folk rock
+		- emo
+		- french rock
+		- nueva ola
+		- milonga
+		- deep funk
+		- chanson pour boire
+		- brukdown
+		- music of guizhou
+		- marchinha
+		- bass
+		- čalgija
+		- early baroque
+		- city pop
+		- terrorcore
+		- nu skool breaks
+		- algorave
+		- image song
+		- garage
+		- quiet storm
+		- psychedelic hip hop
+		- listening
+		- carol
+		- gaelic punk
+		- afro pop
+		- music of scotland
+		- industrial
+		- 8-bit music
+		- moombahcore
+		- sounds
+		- hardbass
+		- gaelic music
+		- chamamé
+		- truck-driving country
+		- tropipop
+		- alternative punk
+		- folk songs
+		- music of jiangxi
+		- hi-nrg
+		- rock against communism
+		- kölschrock
+		- songo-salsa
+		- austropop
+		- choro
+		- jari gan
+		- ver
+		- intuitive folk
+		- liturgical
+		- wonky
+		- uplifting trance
+		- uk hard house
+		- waltz
+		- group sounds
+		- ragtime
+		- no wave
+		- yorkshire
+		- anatolian rock
+		- huayño
+		- artcore
+		- sludge metal
+		- die anderen bands
+		- indian folk
+		- incidental
+		- renaissance
+		- baroque pop
+		- progressive psytrance
+		- art music
+		- modern javanese
+		- canción
+		- french baroque music
+		- traditional jazz
+		- trip hop
+		- industrial music
+		- beach
+		- andean
+		- duranguense
+		- poetry
+		- music of jamaica
+		- music in the komi
+		- contemporary r&b
+		- psychedelic
+		- breakstep
+		- noel
+		- jump-up
+		- aṣíkò
+		- traditional heavy metal
+		- marabi
+		- parlour
+		- third wave of ska
+		- big-beat
+		- banda
+		- pasillo
+		- shaabi
+		- waka music
+		- new york death metal
+		- iroquois
+		- gospel music
+		- tonadilla
+		- siteran
+		- dōjin music
+		- ethnic electronica
+		- dance-rock
+		- jumpstyle
+		- punkabilly
+		- cadence-lypso
+		- synthpunk
+		- melodie
+		- plunderphonics
+		- nueva trova
+		- ambient black metal
+		- southern soul
+		- toeshey
+		- musik
+		- argentine cumbia
+		- snap
+		- emo rap
+		- mainstream rock
+		- disco polo
+		- porn groove
+		- british hip hop
+		- mexican
+		- pueblo
+		- alternative hip hop
+		- kapanirong
+		- music of algeria
+		- american march music
+		- concert march
+		- samba
+		- emo rock
+		- new school hip hop
+		- pathetique
+		- hardbag
+		- opm
+		- electropunk
+		- andean new age music
+		- dark cabaret
+		- j-pop
+		- atmospheric black metal
+		- bouyon soca
+		- goombay
+		- american minstrel
+		- trance metal
+		- djent
+		- in nomine
+		- gharnati
+		- neo trance
+		- latin alternative
+		- industrial hardcore
+		- mbaqanga
+		- funeral doom metal
+		- hatecore
+		- folklore of argentina
+		- villanella
+		- dance
+		- jungle
+		- jongo
+		- electronicore
+		- nueva canción chilena
+		- deutsche welle
+		- easy listening
+		- tamunangue
+		- southern hip hop
+		- ottoman classical music
+		- filmi
+		- narodna muzika
+		- lapar
+		- indie rock
+		- maroon
+		- albazo
+		- gosos
+		- power duo
+		- opera metal
+		- alpine folk
+		- hard and heavy
+		- blues rock
+		- norwegian pop
+		- beach music
+		- pop music in ukraine
+		- chilean rock
+		- music of the andaman and nicobar islands
+		- dance-punk
+		- kei
+		- cowboy pop
+		- indoribbean pop
+		- cumbia rap
+		- pop rock
+		- bossa nova
+		- desi hip hop
+		- denpa song
+		- chaabi
+		- sarva
+		- electro house
+		- zemirot
+		- east coast hip hop
+		- totalism
+		- thrash
+		- ca din tulnic
+		- blackened death metal
+		- contemporary christian music
+		- pop metal
+		- protest song
+		- taiwanese folk
+		- stage and screen
+		- early ragga
+		- kuyis
+		- swamp rock
+		- nóta
+		- and screen
+		- malagueñas
+		- bolel
+		- bakersfield sound
+		- disco
+		- music in rostov
+		- saeta
+		- comic song
+		- concertato
+		- ska-core
+		- experimental rock
+		- east coast blues
+		- latin ballad
+		- skiffle
+		- jewish rock
+		- jersey club
+		- political
+		- pub rock
+		- acid rock
+		- organ school
+		- chaiti
+		- avanzada regia
+		- cruel romance
+		- various genre
+		- music of sri lanka
+		- early reggae
+		- waka
+		- pop-rap
+		- french pop music
+		- pesnya
+		- jwé
+		- caña
+		- rhythm
+		- thung
+		- moroccan pop
+		- hard bop
+		- avant-pop
+		- chill-out
+		- stronda music
+		- bandish
+		- chicago hardcore
+		- guitar
+		- soca music
+		- industrial rock
+		- dhumpa sangita
+		- indigenous
+		- dumka
+		- garage house
+		- alpine folk music
+		- wonky pop
+		- music of san marino
+		- smooth jazz
+		- disco house
+		- greek folk
+		- pasodoble
+		- nòva cançon
+		- york death metal
+		- unaizah samri
+		- african gospel
+		- njuup
+		- christian hardcore
+		- music of west africa
+		- haitian rock
+		- lounge
+		- cappella
+		- jazz blues
+		- 009 sound system
+		- noise pop
+		- symphonic music
+		- hard rock
+		- powerviolence
+		- urban contemporary
+		- kan ha diskan
+		- rekuhkara
+		- mizrahi music
+		- glam metal
+		- footwork
+		- modern blues
+		- german punk
+		- raggacore
+		- spring song
+		- sleaze rock
+		- lyrical art
+		- breaks
+		- troll metal
+		- boogaloo
+		- wave
+		- progressive metal
+		- makossa
+		- alkayida
+		- minimal music
+		- kwakwaka'wakw music
+		- salsa
+		- tower music
+		- rave music
+		- romance
+		- repertoire
+		- psychedelic trance
+		- memphis soul
+		- meditation
+		- mento
+		- brick city club
+		- nayda
+		- rabiz
+		- novelty piano
+		- balearic beat
+		- avant-garde jazz
+		- kacapi suling
+		- jeel
+		- sufi
+		- mawwal
+		- dubstep
+		- microhouse
+		- dirty house
+		- archontorebetiko
+		- bard
+		- renaissance music
+		- contemporary classical music
+		- sprechgesang
+		- electronic forró
+		- carnavalskraker
+		- big beat
+		- doom metal
+		- breakbeat
+		- dihanaam
+		- ahellil
+		- vocal
+		- mundartrock
+		- neo acoustic
+		- pachanga
+		- 8-bit
+		- algerian chaabi
+		- indie pop
+		- bass house
+		- guajira
+		- nerd
+		- propaganda
+		- future garage
+		- hopak-kolom
+		- electronic body
+		- cloud rap
+		- tropical house
+		- celtic punk
+		- schedrovka
+		- retro-prog
+		- long song
+		- h8000
+		- mirror canon
+		- space disco
+		- revolutionary song
+		- 21st-century classical
+		- bertsolaritza
+		- reggada
+		- holubka
+		- daechwita
+		- trallpunk
+		- batuque
+		- punk'n'roll
+		- favola in musica
+		- riyaz
+		- chutney
+		- independent
+		- sacred harp
+		- cha-cha-cha
+		- latin rock
+		- din tulnic
+		- flamenco
+		- ballade
+		- andalusian classical
+		- southern rock
+		- music of hubei
+		- gangsta rap
+		- drill 'n' bass
+		- christmas carol
+		- a palo seco
+		- harawi
+		- soul jazz
+		- music of british columbia
+		- prog
+		- coimbra fado
+		- kadans
+		- indian classical
+		- bounce
+		- punk metal
+		- red and anarchist black metal
+		- dark electro
+		- calypso music
+		- duu
+		- morna
+		- frat rock
+		- rock andaluz
+		- march
+		- hip hop
+		- crossover jazz
+		- thai sakon
+		- romantic
+		- piano rock
+		- groove
+		- german hip hop
+		- glee
+		- rma
+		- tondero
+		- pagode
+		- dangdut
+		- freeform hardcore
+		- dark metal
+		- slutwave
+		- tonás
+		- iroquois music
+		- latin house
+		- dark wave
+		- ethno jazz
+		- music of kalmykia
+		- cool jazz
+		- minimal house
+		- toasting
+		- minimal techno
+		- eefing
+		- tembang sunda
+		- gothic
+		- urban pasifika
+		- hard dance
+		- electrotango
+		- bantowbol
+		- indorock
+		- style
+		- italo dance
+		- canción melódica
+		- music of ireland
+		- inuit music
+		- post-bop
+		- lento violento
+		- electronica
+		- punk
+		- world
+		- early hardstyle
+		- melbourne bounce
+		- nederpop
+		- vispop
+		- reggaestep
+		- greek folk music
+		- emo pop
+		- latin american music
+		- bebop
+		- volksmusik
+		- baltimore club
+		- gazel
+		- kong hip hop
+		- folk jazz
+		- post-hardcore
+		- acoustic music
+		- chamber
+		- mandopop
+		- polca canaria
+		- zouk
+		- bolero
+		- new-age
+		- grungecore
+		- gamelan gong kebyar
+		- screamo rap
+		- funk ostentação
+		- merong
+		- soundcloud rap
+		- new mexico music
+		- blatnaya pesnya
+		- western
+		- post-disco
+		- sadcore
+		- mini-jazz
+		- contemporary folk music
+		- hasidic
+		- slovenian rock
+		- carnival song
+		- freestyle
+		- jōruri
+		- hindustani classical
+		- music of krasnoyarsk krai
+		- odissi
+		- time lord rock
+		- mainstream jazz
+		- spacesynth
+		- boedra
+		- antico
+		- roots reggae
+		- progressive death metal
+		- bhavageete
+		- delta blues
+		- trap metal
+		- french polka
+		- krautrock
+		- celtic
+		- pakistani semi-classical music
+		- kliningan
+		- death 'n' roll
+		- min'yō
+		- horror
+		- chicago house
+		- latin
+		- new york blues
+		- prison rock
+		- traditional bluegrass
+		- wa dansi
+		- viking rock
+		- music of the cayman
+		- electronic
+		- soca
+		- marimbalax
+		- kbach
+		- tambu
+		- humoresque
+		- electronic dance music
+		- cavalier song
+		- philadelphia soul
+		- religious music
+		- fado
+		- romani music
+		- homo hop
+		- swedish ballad tradition
+		- township music
+		- speedcore
+		- balkan brass
+		- instrumental
+		- psychedelic rock
+		- pour boire
+		- melodic hardcore
+		- reggaeton
+		- calentano
+		- sardana
+		- bozlak
+		- metal
+		- russendisko
+		- music of innsbruck
+		- propaganda song
+		- comedy music
+		- new jack swing
+		- campaign song
+		- nova
+		- cuplé
+		- slovak folk music
+		- latin music
+		- gamelan gadhon
+		- orleans rhythm and blues
+		- cybergrind
+		- qawwali
+		- q'axilu
+		- pagan black metal
+		- hardtechno
+		- samri
+		- rock en español
+		- blues
+		- balkan jazz
+		- symphony
+		- semba
+		- morning song
+		- bluegrass gospel
+		- post-metal
+		- circus
+		- flow
+		- gospel
+		- oi!
+		- cajun
+		- darkcore
+		- adult contemporary
+		- pacific reggae
+		- modern javanese music
+		- iê-iê-iê
+		- northern soul
+		- mirabrás
+		- white power
+		- breakbeat hardcore
+		- ambient
+		- mariachi
+		- 4-beat
+		- dub techno
+		- british rock
+		- music of mexico
+		- political hip hop
+		- guaracha
+		- alternative r&b
+		- elevator music
+		- lied
+		- lo-fi
+		- cueca
+		- deuda song
+		- country soul
+		- children's song
+		- alternative rock
+		- new orleans rhythm and blues
+		- freestyle rap
+		- cante jondo
+		- gypsy punk
+		- thai pop music
+		- unblack metal
+		- kulning
+		- benga music
+		- tarava
+		- jewish
+		- vocal music
+		- synth
+		- grebo
+		- american primitive guitar
+		- experimental pop
+		- sung poetry
+		- kurdish
+		- smooth reggae
+		- funktronica
+		- gregorian chant
+		- summer 2016 tour
+		- indigenous australian music
+		- jesus music
+		- diva house
+		- jazz rock
+		- deathcore
+		- peyote song
+		- katuli
+		- comedy hip hop
+		- klezmer
+		- ola
+		- meloblack metal
+		- 21st-century classical music
+		- nordic folk music
+		- turkish folk
+		- black music
+		- chutney soca
+		- uk hardcore
+		- folk metal
+		- nu-punk
+		- world fusion music
+		- midwest hip hop
+		- industrial metal
+		- estrada
+		- trance
+		- luang
+		- experimental
+		- samba-rock
+		- epic music
+		- breakcore
+		- lam saravane
+		- nenia
+		- contemporary
+		- mando
+		- kajari
+		- riot grrrl
+		- musique concrète
+		- tropical music
+		- lo-fi music
+		- pols
+		- electro-industrial
+		- finnish grime
+		- electroacoustic music
+		- hori
+		- merengue
+		- xhosa
+		- minimal wave
+		- indietronica
+		- madchester
+		- techdombe
+		- chamber pop
+		- visual kei
+		- hipco
+		- xhosa music
+		- celtic fusion
+		- salendro
+		- insertion aria
+		- tsugaru-jamisen
+		- dancehall
+		- party song
+		- american minstrel music
+		- argentine tango
+		- area thrash metal
+		- sensitive style
+		- gamelan selunding
+		- math rock
+		- soul
+		- azonto
+		- sophisti-pop
+		- yeongsan hoesang
+		- phleng phuea chiwit
+		- kenyan hip hop
+		- madhyalaya
+		- chumak
+		- ska
+		- socialist black metal
+		- corrido
+		- bachata
+		- african reggae
+		- filmi pop
+		- classic rag
+		- house
+		- samai
+		- rhyming spiritual
+		- electropop
+		- harsh noise
+		- rasin
+		- keening
+		- garage punk
+		- post-industrial
+		- new mexico
+		- gumbe
+		- brunh
+		- ethnic pop
+		- biker metal
+		- krung
+		- cantes a palo seco
+		- roots rock
+		- moombahton
+		- jing ping
+		- witch house
+		- breakup song
+		- kawina
+		- mafioso rap
+		- french house
+		- orchestra
+		- hardcore ragga
+		- french hip hop
+		- chilena
+		- chicha
+		- livetronica
+		- merenhouse
+		- aggrotech
+		- war metal
+		- true metal
+		- persian traditional music
+		- sainaimu
+		- vocal jazz
+		- meditation music
+		- crunk
+		- progressive bluegrass
+		- old-school hip hop
+		- west coast blues
+		- music of henan
+		- reggae en español
+		- mazurca ranchera
+		- progressive trance
+		- tafelmusik
+		- western swing
+		- carnatic music
+		- stoner doom
+		- neue deutsche welle
+		- andalusi nubah
+		- pasifika
+		- mod revival
+		- music of transylvania
+		- moroccan chaabi
+		- afro trap
+		- boogie rock
+		- kyma
+		- polonaise
+		- eclecticism in music
+		- al jeel
+		- turntablism
+		- forró
+		- beguine
+		- alentejano
+		- swing
+		- bomba
+		- spoken word
+		- traditional pop music
+		- andalusian classical music
+		- rag
+		- israeli hip hop
+		- music in nenets autonomous okrug
+		- hip hop tuga
+		- primitive guitar
+		- kwaito
+		- contemporary jewish religious music
+		- ikinimba
+		- protopunk
+		- christmas music
+		- wassoulou
+		- jamaquello
+		- liquid funk
+		- dance music
+		- space
+		- andean new age
+		- freestyle music
+		- music in the udmurt
+		- polish rock
+		- shoegazing
+		- russian rock
+		- gamelan bebonangan
+		- punk pathetique
+		- polka
+		- rumba
+		- neue deutsche härte
+		- grindcore
+		- popular classical
+		- neo-psychedelia
+		- bassline
+		- r&b
+		- sawani
+		- venezuelan merengue
+		- papare
+		- epic doom metal
+		- rom kbach
+		- dansband pop
+		- bolero son
+		- siguiriyas
+		- humppa
+		- music of brittany
+		- phuea chiwit
+		- hoesang
+		- sea shanty
+		- sambass
+		- funkstep
+		- technobanda
+		- african-american music
+		- soul music
+		- epic heavy metal
+		- saz semai
+		- aleatoric music
+		- pocky
+		- andean music
+		- and anarchist black metal
+		- electro swing
+		- contemporary worship music
+		- traditional pop
+		- t'ong guitar
+		- chillwave
+		- symphonic black metal
+		- art pop
+		- tropical
+		- tswana
+		- dirty rap
+		- música criolla
+		- summer
+		- kolyadka
+		- chalga
+		- stadium anthem
+		- ambient house
+		- lowercase
+		- music of sri
+		- space music
+		- v-pop
+		- alternative dance
+		- neo soul
+		- storm
+		- taiwanese hip hop
+		- sunda
+		- cymrucana
+		- alternative country
+		- blue-eyed soul
+		- nanas
+		- glitch
+		- chamrieng samai
+		- alternative metal
+		- slovak folk
+		- nordic folk
+		- doomcore
+		- mélodie
+		- kz-pop
+		- manila sound
+		- wave of american heavy metal
+		- xiyue
+		- leftfield
+		- folk punk
+		- palingsound
+		- political party song
+		- honky tonk
+		- newsierock
+		- rap music
+		- progressive folk music
+		- blackcore
+		- against communism
+		- hardcore
+		- holler blues
+		- axé music
+		- foxcore
+		- fidget house
+		- vocal trance
+		- funk metal
+		- ultra
+		- aragonese
+		- jangle pop
+		- space rock
+		- shanty
+		- electronic rock
+		- albanian hip hop
+		- parlour music
+		- j-rock
+		- wind music
+		- melodic funk
+		- nintendocore
+		- frenchcore
+		- power noise
+		- byzantine
+		- carioca
+		- martial music
+		- symphonic rock
+		- nu-disco
+		- lament
+		- mainstream hardcore
+		- alternative music
+		- neo-progressive rock
+		- levenslied
+		- russian chanson
+		- gnawa
+		- canzone napoletana
+		- drum
+		- old school death metal
+		- pastorale
+		- metua
+		- rhumba
+		- country music
+		- christian
+		- g-funk
+		- tamborito
+		- coupé-décalé
+		- gothic punk
+		- indian pop
+		- comedy
+		- chorale concerto
+		- psychedelic pop
+		- bouncy techno
+		- criolla
+		- gamelan salendro
+		- rock music in
+		- glam punk
+		- skate punk
+		- french progressive rock
+		- d-beat
+		- hip hop music
+		- mbube
+		- highlife
+		- luk thung
+		- world music
+		- new rave
+		- raï
+		- irish traditional music
+		- algerian hip hop
+		- mixture rock
+		- ghettotech
+		- tango
+		- hiplife
+		- contemporary christian
+		- danza
+		- lundu
+		- naattupurapaattu
+		- stile antico
+		- avant-garde metal
+		- propaganda music
+		- jondo
+		- xintianyou
+		- ceol meadhonach
+		- underground hip hop
+		- r'n'besk
+		- operatic pop
+		- chanson
+		- soldier's song
+		- screamo
+		- dream trance
+		- dura
+		- school death metal
+		- progressive country
+		- power pop
+		- thai pop
+		- japanese jazz
+		- italo disco
+		- blues metal
+		- live looping
+		- seminole music
+		- swing revival
+		- early hardcore
+		- latin american
+		- salon
+		- hong kong hip hop
+		- black doom
+		- texas country music
+		- latin pop
+		- drum'n'core
+		- music of jilin
+		- americana
+		- music of navarre and la
+		- sonata
+		- baisha xiyue
+		- celtic rock
+		- bebonangan
+		- sari gan
+		- zindalii
+		- fell
+		- chaoui music
+		- sufi music
+		- modern classical
+		- power electronics
+		- pichakaree
+		- anison
+		- power metal
+		- southern metal
+		- proto-metal
+		- chicano rock
+		- a cappella
+		- cante alentejano
+		- pilón
+		- baroque
+		- minimalist trance
+		- geistliches konzert
+		- bulgarian folk songs
+		- french blues
+		- chumba
+		- nueva canción
+		- rock català
+		- sega
+		- christian rock
+		- music in astrakhan oblast
+		- love metal
+		- japanese hip hop
+		- college rock
+		- new flamenco
+		- carranga (music genre)
+		- technical death metal
+		- dance-pop
+		- chap hop
+		- luk krung
+		- taiwanese mandopop
+		- selunding
+		- neo-rockabilly
+		- music in rostov oblast
+		- future bass
+		- cha-wave
+		- wassoulou music
+		- vaudeville-opérette
+		- dixieland
+		- joropo
+		- mezwed
+		- noise wall
+		- music in khakassia
+		- heavy metal
+		- beag
+		- synthwave
+		- coldwave
+		- alternative
+		- tech house
+		- minneapolis sound
+		- sthayi
+		- nubah
+		- forme complexe
+		- red dirt
+		- world fusion
+		- jazz rap
+		- horrorcore
+		- rock noir
+		- celtic metal
+		- ambient music
+		- folk baroque
+		- middle of the road
+		- neofolk
+		- hands up
+		- copla
+		- intelligent dance music
+		- acid jazz
+		- black contemporary
+		- gothabilly
+		- electro dance
+		- madrigal
+		- new acoustic
+		- twoubadou
+		- production music
+		- psybient
+		- piano
+		- post-classical
+		- alternative reggaeton
+		- music of melanesia
+		- techno body music
+		- tropicália
+		- art
+		- dungeon synth
+		- wangga
+		- music of macedonia
+		- crust punk
+		- orchestral jazz
+		- room house
+		- rub-a-dub
+		- texas country
+		- r and b
+		- 80's
+		- 80s
+		- 70s
+		- 70's
+		- 60's
+		- 60s
+		- 90s
+		- 90's
+		- 50's
+		- 50s
+
+
+> # RegEx entities
+
+
